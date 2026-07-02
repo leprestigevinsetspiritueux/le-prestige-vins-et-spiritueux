@@ -1370,12 +1370,13 @@ nav{
     position:fixed;
     top:0;
     left:0;
-
     width:100%;
 
     background:#111;
 
-    padding:10px;
+    padding:10px 5px;
+
+    overflow:hidden;
 
 }
 
@@ -1389,9 +1390,13 @@ nav{
 
     align-items:center;
 
-    gap:10px;
+    gap:8px;
 
     list-style:none;
+
+    padding:0;
+
+    margin:0;
 
 }
 
@@ -1405,16 +1410,17 @@ nav{
 
     display:block;
 
-    padding:10px 12px;
+    padding:8px 10px;
 
-    font-size:15px;
+    font-size:14px;
+
+    white-space:nowrap;
 
     color:#fff;
 
     text-decoration:none;
 
 }
-
   /* ACCUEIL */
 
     #accueil{
