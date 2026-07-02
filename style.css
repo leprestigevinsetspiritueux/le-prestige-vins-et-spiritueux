@@ -1362,51 +1362,60 @@ footer{
     transform:scale(1.08);
 
 }
-/* ===================================================== */
-/* RESPONSIVE MOBILE */
-/* ===================================================== */
 
-@media (max-width:768px){
+/* MENU MOBILE */
 
-    /* MENU */
+nav{
 
-    nav{
-        position:fixed;
-        top:15px;
-        left:15px;
-        right:15px;
+    position:fixed;
+    top:0;
+    left:0;
 
-        width:auto;
+    width:100%;
 
-        padding:15px;
+    background:#111;
 
-        background:#111;
+    padding:10px;
 
-        border-radius:18px;
+}
 
-        box-shadow:0 10px 25px rgba(0,0,0,.35);
-    }
+#menu{
 
-    #menu a{
+    display:flex !important;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    list-style:none;
+
+}
+
+#menu li{
+
+    margin:0;
+
+}
+
+#menu a{
 
     display:block;
-    padding:18px;
-    text-align:center;
-    border-bottom:1px solid #333;
+
+    padding:10px 12px;
+
+    font-size:15px;
+
+    color:#fff;
+
+    text-decoration:none;
 
 }
 
-#menu a:hover{
-
-    background:#222;
-
-}
-
-    #menu a:last-child{
-        border-bottom:none;
-    }
-
-    /* ACCUEIL */
+  /* ACCUEIL */
 
     #accueil{
         min-height:85vh;
