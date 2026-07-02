@@ -620,22 +620,10 @@ function fermerPanier(){
 
 }
 
-function envoyerAvisWhatsApp(){
-
-    const nom = document.getElementById("nom-client").value.trim();
-    const commentaire = document.getElementById("commentaire-client").value.trim();
-
-    if(nom === "" || commentaire === ""){
-
-        alert("Veuillez remplir tous les champs.");
-        return;
-
-    }
-
     const etoiles = "⭐".repeat(noteSelectionnee);
 
     const message =
-`Bonjour Le Prestige Vins & Spiritueux,
+`Bonjour Le Prestige Vins et Spiritueux,
 
 Je souhaite laisser un avis.
 
@@ -657,37 +645,5 @@ Merci.`;
     document.getElementById("commentaire-client").value = "";
 
 }
-
-function envoyerAvisWhatsApp(){
-
-    const nom = document.getElementById("nom-client").value.trim();
-    const commentaire = document.getElementById("commentaire-client").value.trim();
-
-    if(nom === "" || commentaire === ""){
-        alert("Veuillez remplir votre prénom et votre avis.");
-        return;
-    }
-
-    const message =
-`Bonjour Le Prestige Vins & Spiritueux,
-
-Je souhaite laisser un avis.
-
-👤 Prénom : ${nom}
-
-💬 Avis :
-${commentaire}
-
-Merci.`;
-
-    window.open(
-        "https://wa.me/2290197592841?text=" + encodeURIComponent(message),
-        "_blank"
-    );
-
-    document.getElementById("nom-client").value = "";
-    document.getElementById("commentaire-client").value = "";
-}
-
 
 
