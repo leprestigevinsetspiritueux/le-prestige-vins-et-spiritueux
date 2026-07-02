@@ -1365,60 +1365,49 @@ footer{
 
 /* MENU MOBILE */
 
-nav{
+@media (max-width:768px){
 
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
+    nav{
 
-    background:#111;
+        position:fixed;
+        top:0;
+        left:0;
 
-    padding:10px 5px;
+        width:100%;
 
-    overflow:hidden;
+        background:#111;
 
-}
+        padding:10px 5px;
 
-#menu{
+        overflow-x:auto;
 
-    display:flex !important;
+    }
 
-    flex-wrap:wrap;
+    #menu{
 
-    justify-content:center;
+        display:flex;
 
-    align-items:center;
+        justify-content:flex-start;
 
-    gap:8px;
+        align-items:center;
 
-    list-style:none;
+        flex-wrap:nowrap;
 
-    padding:0;
+        gap:18px;
 
-    margin:0;
+        width:max-content;
 
-}
+        padding:0 10px;
 
-#menu li{
+    }
 
-    margin:0;
+    #menu a{
 
-}
+        white-space:nowrap;
 
-#menu a{
+        font-size:15px;
 
-    display:block;
-
-    padding:8px 10px;
-
-    font-size:14px;
-
-    white-space:nowrap;
-
-    color:#fff;
-
-    text-decoration:none;
+    }
 
 }
   /* ACCUEIL */
