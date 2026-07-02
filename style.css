@@ -1742,12 +1742,21 @@ footer{
 }
 
 .fermer-panier{
+
     position:absolute;
+
     top:20px;
-    left:20px;     
-    
+
+    right:20px;
+
+    left:auto;
+
     width:42px;
     height:42px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
     border:none;
     border-radius:50%;
@@ -1759,6 +1768,7 @@ footer{
     cursor:pointer;
 
     z-index:10000;
+
 }
 /* ==========================
    BAS DU PANIER FIXE
