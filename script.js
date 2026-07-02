@@ -345,10 +345,16 @@ function viderRecherche(){
 // =====================================================
 // CHOISIR UNE SUGGESTION
 // =====================================================
-
 function choisirProduit(nom){
 
+    const recherche = document.getElementById("recherche");
+    const suggestions = document.getElementById("suggestions");
     const cartes = document.querySelectorAll(".produits .carte");
+
+    recherche.value = nom;
+
+    suggestions.innerHTML = "";
+    suggestions.style.display = "none";
 
     cartes.forEach(carte=>{
 
@@ -356,16 +362,22 @@ function choisirProduit(nom){
 
         if(titre && titre.innerText === nom){
 
+            carte.style.display = "flex";
+
             carte.scrollIntoView({
                 behavior:"smooth",
                 block:"center"
             });
 
+        }else{
+
+            carte.style.display = "none";
+
         }
 
     });
 
-    viderRecherche();
+    document.getElementById("nb-resultats").textContent = "1 produit trouvé";
 
 }
 
@@ -556,69 +568,6 @@ document.addEventListener("DOMContentLoaded",function(){
     afficherPanier();
 
     mettreAJourCompteRebours();
-
-});
-
-// =====================================
-// AVIS CLIENTS V4
-// =====================================
-
-let noteSelectionnee = 5;
-
-// Choisir la note
-function choisirNote(note){
-    noteSelectionnee = note;
-}
-
-// Publier un avis
-function publierAvis(){
-
-    const nom = document.getElementById("nom-client").value.trim();
-    const commentaire = document.getElementById("commentaire-client").value.trim();
-
-    if(nom === "" || commentaire === ""){
-        alert("Veuillez remplir tous les champs.");
-        return;
-    }
-
-    const liste = document.getElementById("liste-avis");
-
-    const etoiles = "⭐".repeat(noteSelectionnee);
-
-    liste.innerHTML =
-    `
-    <div class="avis-card">
-        <div class="etoiles-affichage">${etoiles}</div>
-        <h3>${nom}</h3>
-        <p>${commentaire}</p>
-    </div>
-    ` + liste.innerHTML;
-
-    sauvegarderAvis();
-
-    document.getElementById("nom-client").value = "";
-    document.getElementById("commentaire-client").value = "";
-
-}
-
-// Sauvegarder
-function sauvegarderAvis(){
-
-    localStorage.setItem(
-        "avisClients",
-        document.getElementById("liste-avis").innerHTML
-    );
-
-}
-
-// Charger les avis
-document.addEventListener("DOMContentLoaded",function(){
-
-    const avis = localStorage.getItem("avisClients");
-
-    if(avis){
-        document.getElementById("liste-avis").innerHTML = avis;
-    }
 
 });
 
