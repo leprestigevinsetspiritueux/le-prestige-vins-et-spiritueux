@@ -1559,20 +1559,7 @@ footer{
 
 }
 
-/* ========================================= */
-/* MENU HAMBURGER */
-/* ========================================= */
-
-.menu-toggle{
-    display:none;
-    background:none;
-    border:none;
-    color:#d4af37;
-    font-size:40px;
-    cursor:pointer;
-}
-
-/* Version mobile */
+/* MENU MOBILE */
 
 nav{
 
@@ -1584,7 +1571,7 @@ nav{
 
     background:#111;
 
-    padding:10px 5px;
+    padding:12px 5px;
 
     z-index:9999;
 
@@ -1592,7 +1579,7 @@ nav{
 
 #menu{
 
-    display:flex !important;
+    display:flex;
 
     flex-wrap:wrap;
 
@@ -1602,31 +1589,17 @@ nav{
 
     gap:8px;
 
-    list-style:none;
-
-    padding:0;
-
-    margin:0;
-
-}
-
-#menu li{
-
-    margin:0;
-
 }
 
 #menu a{
-
-    display:block;
-
-    padding:8px 10px;
 
     color:#fff;
 
     text-decoration:none;
 
-    font-size:14px;
+    font-size:15px;
+
+    padding:8px 10px;
 
     white-space:nowrap;
 
