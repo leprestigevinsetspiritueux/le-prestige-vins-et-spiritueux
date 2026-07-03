@@ -1461,8 +1461,8 @@ footer p{
     background:#111;
     border-radius:18px;
 
-    padding:15px;
-
+    padding:10px 12px;
+    
     z-index:1000;
 
     box-shadow:0 10px 25px rgba(0,0,0,.35);
@@ -1476,16 +1476,16 @@ footer p{
     justify-content:center;
     align-items:center;
     flex-wrap:wrap;
-    gap:18px;
+    gap:10px;
     width:100%;
 }
 
 #menu a{
     color:#fff;
     text-decoration:none;
-    font-size:16px;
+    font-size:15px;
     font-weight:600;
-    padding:8px 10px;
+    padding:6px  8px;
     transition:.3s;
 }
 
