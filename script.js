@@ -1,177 +1,260 @@
-// =====================================================
-// LE PRESTIGE V2
-// PANIER
-// =====================================================
+//====================================================
+// LE PRESTIGE V3
+// Script officiel
+//====================================================
+
+"use strict";
+
+//====================================================
+// VARIABLES
+//====================================================
 
 let panier = JSON.parse(localStorage.getItem("panier")) || [];
-let total = 0;
 
-// =====================================================
-// Ajouter un produit
-// =====================================================
+const listePanier = document.getElementById("liste-panier");
+const totalPanier = document.getElementById("total");
+const nombrePanier = document.getElementById("nombre-panier");
+const overlayPanier = document.getElementById("overlay-panier");
+const panierLateral = document.getElementById("panier-lateral");
 
-function ajouterPanier(nom, prix, image){
+//====================================================
+// SAUVEGARDE
+//====================================================
 
-    const existe = panier.find(produit => produit.nom === nom);
+function sauvegarderPanier(){
 
-    if(existe){
+    localStorage.setItem(
+        "panier",
+        JSON.stringify(panier)
+    );
 
-        existe.quantite++;
+}
+
+//====================================================
+// OUVRIR PANIER
+//====================================================
+
+function ouvrirPanier(){
+
+    panierLateral.classList.add("ouvert");
+
+    overlayPanier.style.display = "block";
+
+}
+
+//====================================================
+// FERMER PANIER
+//====================================================
+
+function fermerPanier(){
+
+    panierLateral.classList.remove("ouvert");
+
+    overlayPanier.style.display = "none";
+
+}
+
+//====================================================
+// AJOUTER UN PRODUIT AU PANIER
+//====================================================
+
+function ajouterPanier(nom, prix){
+
+    const produit = panier.find(item => item.nom === nom);
+
+    if(produit){
+
+        produit.quantite++;
 
     }else{
 
- panier.push({
-    nom,
-    prix,
-    image,
-    quantite: 1
- });
+        panier.push({
+
+            nom: nom,
+            prix: prix,
+            quantite: 1
+
+        });
 
     }
 
+    sauvegarderPanier();
+
     afficherPanier();
 
-    ouvrirPanier();
-
-    afficherNotification(nom + " ajouté au panier");
+    afficherNotification();
 
 }
-// =====================================================
-// Afficher le panier
-// =====================================================
+
+//====================================================
+// AFFICHER LE PANIER
+//====================================================
 
 function afficherPanier(){
 
-    const liste = document.getElementById("liste-panier");
-    const totalElement = document.getElementById("total");
-    const compteur = document.getElementById("nombre-panier");
+    listePanier.innerHTML = "";
 
-    if(!liste || !totalElement) return;
+    let total = 0;
 
-    liste.innerHTML = "";
-    total = 0;
+    let nombre = 0;
+
+    if(panier.length === 0){
+
+        listePanier.innerHTML =
+
+        "<p>Votre panier est vide.</p>";
+
+    }
 
     panier.forEach((produit,index)=>{
 
         total += produit.prix * produit.quantite;
 
-        liste.innerHTML += `
-        <div class="ligne-panier">
+        nombre += produit.quantite;
 
-            <div class="infos-panier">
-                <strong>${produit.nom}</strong><br>
-                ${produit.prix.toLocaleString()} FCFA
-            </div>
+        listePanier.innerHTML += `
 
-            <div class="quantite-zone">
+<div class="ligne-panier">
 
-                <button class="quantite-btn"
-                    onclick="diminuerQuantite(${index})">
-                    −
-                </button>
+<div class="infos-panier">
 
-                <span class="quantite">
-                    ${produit.quantite}
-                </span>
+<strong>${produit.nom}</strong>
 
-                <button class="quantite-btn"
-                    onclick="augmenterQuantite(${index})">
-                    +
-                </button>
+<br>
 
-            </div>
+${produit.prix.toLocaleString()} FCFA
 
-            <button class="btn-supprimer"
-                onclick="supprimerProduit(${index})">
-                ❌
-            </button>
+</div>
 
-        </div>
-        `;
+<div class="actions-panier">
+
+<button onclick="modifierQuantite(${index},-1)">
+
+−
+
+</button>
+
+<span>
+
+${produit.quantite}
+
+</span>
+
+<button onclick="modifierQuantite(${index},1)">
+
++
+
+</button>
+
+<button onclick="supprimerProduit(${index})">
+
+🗑️
+
+</button>
+
+</div>
+
+</div>
+
+`;
+
     });
 
-    if(panier.length===0){
-        liste.innerHTML = "<p>Votre panier est vide.</p>";
-    }
+    totalPanier.textContent = total.toLocaleString();
 
-    totalElement.textContent = total.toLocaleString();
+    nombrePanier.textContent = nombre;
 
-    if(compteur){
-
-        let nbArticles = 0;
-
-        panier.forEach(produit=>{
-            nbArticles += produit.quantite;
-        });
-
-        compteur.textContent = nbArticles;
-    }
-
-    localStorage.setItem("panier", JSON.stringify(panier));
 }
-// =====================================================
-// Supprimer un produit
-// =====================================================
+
+//====================================================
+// MODIFIER LA QUANTITÉ
+//====================================================
+
+function modifierQuantite(index, variation){
+
+    panier[index].quantite += variation;
+
+    if(panier[index].quantite <= 0){
+
+        panier.splice(index,1);
+
+    }
+
+    sauvegarderPanier();
+
+    afficherPanier();
+
+}
+
+//====================================================
+// SUPPRIMER UN PRODUIT
+//====================================================
 
 function supprimerProduit(index){
 
-    panier.splice(index,1);
+    if(confirm("Supprimer ce produit du panier ?")){
 
-    afficherPanier();
+        panier.splice(index,1);
 
-}
+        sauvegarderPanier();
 
-// =====================================================
-// Augmenter la quantité
-// =====================================================
+        afficherPanier();
 
-function augmenterQuantite(index){
-
-    panier[index].quantite++;
-
-    afficherPanier();
+    }
 
 }
 
-// =====================================================
-// Diminuer la quantité
-// =====================================================
+//====================================================
+// VIDER LE PANIER
+//====================================================
 
-function diminuerQuantite(index){
+function viderPanier(){
 
-    if(panier[index].quantite > 1){
-
-        panier[index].quantite--;
-
-    }else{
-
-        supprimerProduit(index);
+    if(panier.length===0){
 
         return;
 
     }
 
-    afficherPanier();
+    if(confirm("Voulez-vous vraiment vider votre panier ?")){
+
+        panier=[];
+
+        sauvegarderPanier();
+
+        afficherPanier();
+
+    }
 
 }
 
-// =====================================================
-// Vider le panier
-// =====================================================
+//====================================================
+// NOTIFICATION
+//====================================================
 
-function viderPanier(){
+function afficherNotification(){
 
-    panier = [];
+    const notification=document.getElementById("notification-panier");
 
-    localStorage.removeItem("panier");
+    if(!notification){
 
-    afficherPanier();
+        return;
+
+    }
+
+    notification.classList.add("active");
+
+    setTimeout(()=>{
+
+        notification.classList.remove("active");
+
+    },2000);
 
 }
 
-// =====================================================
-// Commander via WhatsApp
-// =====================================================
+//====================================================
+// COMMANDER SUR WHATSAPP
+//====================================================
 
 function commanderWhatsApp(){
 
@@ -184,222 +267,126 @@ function commanderWhatsApp(){
     }
 
     let message =
-`Bonjour Le Prestige Vins & Spiritueux,
+`🛒 Bonjour Le Prestige Vins et Spiritueux,
 
 Je souhaite commander :
 
 `;
 
-    panier.forEach(produit=>{
+    let total = 0;
+
+    panier.forEach((produit)=>{
+
+        const sousTotal =
+            produit.prix * produit.quantite;
+
+        total += sousTotal;
 
         message +=
-`• ${produit.nom}
-${produit.prix.toLocaleString()} FCFA
+
+`🍷 ${produit.nom}
+
+Quantité : ${produit.quantite}
+
+Prix : ${produit.prix.toLocaleString()} FCFA
+
+Sous-total : ${sousTotal.toLocaleString()} FCFA
+
+--------------------------
 
 `;
 
     });
 
     message +=
-`Total : ${total.toLocaleString()} FCFA
 
-Nom :
-Téléphone :
-Adresse :
+`💰 TOTAL : ${total.toLocaleString()} FCFA
 
-Merci.`;
+Merci de confirmer ma commande.`;
 
-const url =
-"https://wa.me/2290197592841?text=" + encodeURIComponent(message);
+    window.open(
 
-window.open(url, "_blank", "noopener,noreferrer");
+"https://wa.me/2290197592841?text="
+
++ encodeURIComponent(message),
+
+"_blank"
+
+    );
+
 }
 
-// =====================================================
-// RECHERCHE + SUGGESTIONS
-// =====================================================
+//====================================================
+// RECHERCHE DES PRODUITS
+//====================================================
 
 function rechercherProduit(){
 
-    const recherche = document.getElementById("recherche");
-    const suggestions = document.getElementById("suggestions");
-    const nbResultats = document.getElementById("nb-resultats");
+    const recherche =
+        document.getElementById("recherche")
+        .value
+        .toLowerCase()
+        .trim();
 
-    if(!recherche) return;
+    const cartes =
+        document.querySelectorAll("#catalogue .carte");
 
-    const filtre = recherche.value.toLowerCase().trim();
+    const suggestions =
+        document.getElementById("suggestions");
 
-    const cartes = document.querySelectorAll(".produits .carte");
+    const resultat =
+        document.getElementById("nb-resultats");
 
-    let compteur = 0;
-    let dejaAjoutes = [];
+    suggestions.innerHTML="";
 
-    indexSuggestion = -1;
-
-    if(suggestions){
-
-        suggestions.innerHTML = "";
-
-    }
+    let compteur=0;
 
     cartes.forEach(carte=>{
 
-        const texte = carte.innerText.toLowerCase();
+        const titre =
+            carte.querySelector("h3")
+            .textContent
+            .toLowerCase();
 
-        const titre = carte.querySelector("h3");
+        if(recherche===""){
 
-        if(!titre) return;
+            carte.style.display="";
 
-        const nom = titre.innerText;
+            return;
 
-        if(texte.includes(filtre)){
+        }
 
-            carte.style.display = "flex";
+        if(titre.includes(recherche)){
+
+            carte.style.display="";
 
             compteur++;
 
-            if(
-                suggestions &&
-                filtre.length > 0 &&
-                nom.toLowerCase().includes(filtre) &&
-                !dejaAjoutes.includes(nom) &&
-                dejaAjoutes.length < 5
-            ){
+            const proposition=document.createElement("div");
 
-                dejaAjoutes.push(nom);
+            proposition.textContent=
+                carte.querySelector("h3").textContent;
 
-                suggestions.innerHTML +=
-                `<div onclick="choisirProduit('${nom.replace(/'/g,"\\'")}')">
-                    🔍 ${nom}
-                </div>`;
+            proposition.onclick=function(){
 
-            }
+                document.getElementById("recherche").value=
+                    this.textContent;
 
-        }else{
+                suggestions.innerHTML="";
 
-            carte.style.display = "none";
+                rechercherProduit();
 
-        }
+                carte.scrollIntoView({
 
-    });
+                    behavior:"smooth",
 
-    if(nbResultats){
+                    block:"center"
 
-        nbResultats.textContent =
-        compteur + " produit(s) trouvé(s)";
+                });
 
-    }
+            };
 
-    if(suggestions){
-
-        suggestions.style.display =
-        suggestions.innerHTML ? "block" : "none";
-
-    }
-
-}
-
-
-// =====================================================
-// VIDER LA RECHERCHE
-// =====================================================
-
-function viderRecherche(){
-
-    const recherche = document.getElementById("recherche");
-    const suggestions = document.getElementById("suggestions");
-    const resultat = document.getElementById("nb-resultats");
-
-    if(recherche){
-
-        recherche.value = "";
-
-        recherche.focus();
-
-    }
-
-    if(suggestions){
-
-        suggestions.innerHTML = "";
-
-        suggestions.style.display = "none";
-
-    }
-
-    if(resultat){
-
-        resultat.textContent = "";
-
-    }
-
-    document.querySelectorAll(".produits .carte").forEach(carte=>{
-
-        carte.style.display = "flex";
-
-    });
-
-    indexSuggestion = -1;
-
-}
-
-// =====================================================
-// CHOISIR UNE SUGGESTION
-// =====================================================
-function choisirProduit(nom){
-
-    const recherche = document.getElementById("recherche");
-    const suggestions = document.getElementById("suggestions");
-    const cartes = document.querySelectorAll(".produits .carte");
-
-    recherche.value = nom;
-
-    suggestions.innerHTML = "";
-    suggestions.style.display = "none";
-
-    cartes.forEach(carte=>{
-
-        const titre = carte.querySelector("h3");
-
-        if(titre && titre.innerText === nom){
-
-            carte.style.display = "flex";
-
-            carte.scrollIntoView({
-                behavior:"smooth",
-                block:"center"
-            });
-
-        }else{
-
-            carte.style.display = "none";
-
-        }
-
-    });
-
-    document.getElementById("nb-resultats").textContent = "1 produit trouvé";
-
-}
-
-// =====================================================
-// FILTRER PAR CATÉGORIE
-// =====================================================
-
-function filtrerCategorie(categorie){
-
-    const cartes = document.querySelectorAll(".produits .carte");
-
-    cartes.forEach(carte=>{
-
-        if(categorie==="tous"){
-
-            carte.style.display="flex";
-
-        }
-
-        else if(carte.classList.contains(categorie)){
-
-            carte.style.display="flex";
+            suggestions.appendChild(proposition);
 
         }
 
@@ -411,214 +398,496 @@ function filtrerCategorie(categorie){
 
     });
 
+    if(recherche===""){
+
+        resultat.textContent="";
+
+    }
+
+    else{
+
+        resultat.textContent=
+        compteur+" produit(s) trouvé(s)";
+
+    }
+
 }
-// =====================================================
-// COMPTE À REBOURS
-// =====================================================
 
-const dateFin = new Date(2026, 11, 31, 23, 59, 59).getTime();
+//====================================================
+// EFFACER LA RECHERCHE
+//====================================================
 
-function mettreAJourCompteRebours(){
+function viderRecherche(){
 
-    const timer = document.getElementById("timer");
+    document.getElementById("recherche").value="";
 
-    if(!timer) return;
+    document.getElementById("suggestions").innerHTML="";
 
-    const maintenant = new Date().getTime();
+    document.getElementById("nb-resultats").textContent="";
 
-    const difference = dateFin - maintenant;
+    document
+        .querySelectorAll("#catalogue .carte")
+        .forEach(carte=>{
 
-    if(difference <= 0){
+            carte.style.display="";
 
-        timer.textContent = "Promotion terminée";
+        });
+
+}
+
+//====================================================
+// FERMER LES SUGGESTIONS
+//====================================================
+
+document.addEventListener("click",function(e){
+
+    if(!e.target.closest(".recherche")){
+
+        document.getElementById("suggestions").innerHTML="";
+
+    }
+
+});
+
+//====================================================
+// FILTRER LES CATÉGORIES
+//====================================================
+
+function filtrerCategorie(categorie){
+
+    const cartes =
+        document.querySelectorAll("#catalogue .carte");
+
+    const recherche =
+        document.getElementById("recherche");
+
+    const suggestions =
+        document.getElementById("suggestions");
+
+    const resultat =
+        document.getElementById("nb-resultats");
+
+    recherche.value = "";
+
+    suggestions.innerHTML = "";
+
+    resultat.textContent = "";
+
+    let compteur = 0;
+
+    cartes.forEach(carte=>{
+
+        if(categorie==="tous"){
+
+            carte.style.display="";
+
+            compteur++;
+
+        }
+
+        else if(carte.classList.contains(categorie)){
+
+            carte.style.display="";
+
+            compteur++;
+
+        }
+
+        else{
+
+            carte.style.display="none";
+
+        }
+
+    });
+
+    if(categorie!=="tous"){
+
+        resultat.textContent =
+        compteur + " produit(s) dans cette catégorie";
+
+    }
+
+}
+
+//====================================================
+// AFFICHER TOUS LES PRODUITS
+//====================================================
+
+function afficherTousProduits(){
+
+    document
+    .querySelectorAll("#catalogue .carte")
+    .forEach(carte=>{
+
+        carte.style.display="";
+
+    });
+
+    document.getElementById("nb-resultats").textContent="";
+
+}
+
+//====================================================
+// RACCOURCI CLAVIER
+//====================================================
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key==="Escape"){
+
+        viderRecherche();
+
+        afficherTousProduits();
+
+    }
+
+});
+
+//====================================================
+// AVIS WHATSAPP
+//====================================================
+
+function envoyerAvisWhatsApp(){
+
+    const nom =
+        document.getElementById("nom-client")
+        .value
+        .trim();
+
+    const commentaire =
+        document.getElementById("commentaire-client")
+        .value
+        .trim();
+
+    if(nom===""){
+
+        alert("Veuillez saisir votre prénom.");
 
         return;
 
     }
 
-    const jours = Math.floor(difference / (1000*60*60*24));
+    if(commentaire===""){
 
-    const heures = Math.floor((difference % (1000*60*60*24)) / (1000*60*60));
+        alert("Veuillez écrire votre avis.");
 
-    const minutes = Math.floor((difference % (1000*60*60)) / (1000*60));
-
-    const secondes = Math.floor((difference % (1000*60)) / 1000);
-
-    timer.textContent =
-        `${jours} j ${heures} h ${minutes} min ${secondes} s`;
-
-}
-
-setInterval(mettreAJourCompteRebours,1000);
-
-
-
-// =====================================================
-// NAVIGATION CLAVIER
-// =====================================================
-
-let indexSuggestion = -1;
-
-const champRecherche = document.getElementById("recherche");
-
-if(champRecherche){
-
-    champRecherche.addEventListener("keydown",function(e){
-
-        const items = document.querySelectorAll("#suggestions div");
-
-        if(items.length===0) return;
-
-        if(e.key==="ArrowDown"){
-
-            e.preventDefault();
-
-            indexSuggestion++;
-
-            if(indexSuggestion>=items.length){
-
-                indexSuggestion=0;
-
-            }
-
-            majSuggestion(items);
-
-        }
-
-        else if(e.key==="ArrowUp"){
-
-            e.preventDefault();
-
-            indexSuggestion--;
-
-            if(indexSuggestion<0){
-
-                indexSuggestion=items.length-1;
-
-            }
-
-            majSuggestion(items);
-
-        }
-
-        else if(e.key==="Enter"){
-
-            if(indexSuggestion>=0){
-
-                e.preventDefault();
-
-                items[indexSuggestion].click();
-
-            }
-
-        }
-
-        else if(e.key==="Escape"){
-
-            document.getElementById("suggestions").style.display="none";
-
-            indexSuggestion=-1;
-
-        }
-
-    });
-
-}
-
-function majSuggestion(items){
-
-    items.forEach(item=>item.classList.remove("active"));
-
-    if(indexSuggestion>=0){
-
-        items[indexSuggestion].classList.add("active");
+        return;
 
     }
 
-}  
+    const message =
 
-// =====================================================
-// NOTIFICATION PANIER
-// =====================================================
+`Bonjour Le Prestige Vins et Spiritueux,
 
-function afficherNotification(message){
+Je souhaite partager mon avis.
 
-    const notification = document.getElementById("notification-panier");
+👤 Prénom :
+${nom}
 
-    if(!notification) return;
+💬 Mon avis :
 
-    notification.textContent = "✅ " + message;
+${commentaire}
 
-    notification.classList.add("active");
+Merci.`;
 
-    setTimeout(function(){
+    window.open(
 
-        notification.classList.remove("active");
+        "https://wa.me/2290197592841?text=" +
 
-    }, 2000);
+        encodeURIComponent(message),
+
+        "_blank"
+
+    );
+
+    document.getElementById("nom-client").value="";
+
+    document.getElementById("commentaire-client").value="";
+
+    alert("Merci pour votre avis !");
 
 }
 
-// =====================================================
-// INITIALISATION
-// =====================================================
+//====================================================
+// ENTRÉE = ENVOI
+//====================================================
 
-document.addEventListener("DOMContentLoaded",function(){
+document
+.getElementById("commentaire-client")
+.addEventListener("keydown",function(e){
 
-    afficherPanier();
+    if(e.ctrlKey && e.key==="Enter"){
 
-    mettreAJourCompteRebours();
+        envoyerAvisWhatsApp();
+
+    }
 
 });
 
-// =====================================
-// MENU HAMBURGER
-// =====================================
+//====================================================
+// NOTIFICATION PRODUIT AJOUTÉ
+//====================================================
 
-document.querySelectorAll("#menu a").forEach(link => {
-    link.addEventListener("click", () => {
-        document.getElementById("menu").classList.remove("active");
-    });
-});
+function afficherNotification(){
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("menu").classList.remove("active");
-});
+    const notification =
+        document.getElementById("notification-panier");
+
+    if(!notification){
+
+        return;
+
+    }
+
+    notification.classList.add("visible");
+
+    setTimeout(function(){
+
+        notification.classList.remove("visible");
+
+    },2000);
+
+}
+
+//====================================================
+// RETOUR EN HAUT
+//====================================================
 
 function retourHaut(){
+
     window.scrollTo({
+
         top:0,
+
         behavior:"smooth"
+
     });
+
 }
 
 window.addEventListener("scroll",function(){
 
-    const bouton=document.getElementById("retour-haut");
+    const bouton =
+        document.getElementById("retour-haut");
 
-    if(window.scrollY>500){
+    if(!bouton){
+
+        return;
+
+    }
+
+    if(window.scrollY>400){
+
         bouton.style.display="flex";
-    }else{
+
+    }
+
+    else{
+
         bouton.style.display="none";
+
     }
 
 });
 
-function ouvrirPanier(){
+//====================================================
+// FERMER LE PANIER AVEC ÉCHAP
+//====================================================
 
-    document.getElementById("panier-lateral").classList.add("ouvert");
+document.addEventListener("keydown",function(e){
 
-    document.getElementById("overlay-panier").style.display="block";
+    if(e.key==="Escape"){
+
+        fermerPanier();
+
+    }
+
+});
+
+//====================================================
+// FERMER EN CLIQUANT SUR L'OVERLAY
+//====================================================
+
+const overlay =
+document.getElementById("overlay-panier");
+
+if(overlay){
+
+    overlay.addEventListener("click",fermerPanier);
 
 }
 
-function fermerPanier(){
+//====================================================
+// INITIALISATION DU SITE
+//====================================================
 
-    document.getElementById("panier-lateral").classList.remove("ouvert");
+document.addEventListener("DOMContentLoaded",function(){
 
-    document.getElementById("overlay-panier").style.display="none";
+    // Restaurer le panier
+    afficherPanier();
+
+    // Masquer le bouton Retour en haut
+    const boutonRetour =
+        document.getElementById("retour-haut");
+
+    if(boutonRetour){
+
+        boutonRetour.style.display="none";
+
+    }
+
+    // Initialiser le compteur de résultats
+    const resultat =
+        document.getElementById("nb-resultats");
+
+    if(resultat){
+
+        resultat.textContent="";
+
+    }
+
+    // Initialiser les suggestions
+    const suggestions =
+        document.getElementById("suggestions");
+
+    if(suggestions){
+
+        suggestions.innerHTML="";
+
+    }
+
+});
+
+//====================================================
+// MISE À JOUR AUTOMATIQUE DU PANIER
+//====================================================
+
+window.addEventListener("storage",function(){
+
+    panier =
+        JSON.parse(localStorage.getItem("panier")) || [];
+
+    afficherPanier();
+
+});
+
+//====================================================
+// RACCOURCI CLAVIER
+//====================================================
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key==="Enter"){
+
+        const recherche =
+            document.getElementById("recherche");
+
+        if(document.activeElement===recherche){
+
+            rechercherProduit();
+
+        }
+
+    }
+
+});
+
+//====================================================
+// PROTECTION CONTRE LES ERREURS
+//====================================================
+
+window.onerror=function(message,source,line){
+
+    console.log(
+
+        "Erreur JavaScript :",
+
+        message,
+
+        "Ligne :",
+
+        line
+
+    );
+
+};
+
+//====================================================
+// LE PRESTIGE V3
+// FINALISATION
+//====================================================
+
+// Vérifier les éléments essentiels
+function verifierElements(){
+
+    const ids = [
+
+        "panier-lateral",
+        "liste-panier",
+        "total",
+        "nombre-panier",
+        "overlay-panier",
+        "recherche",
+        "suggestions",
+        "notification-panier",
+        "retour-haut"
+
+    ];
+
+    ids.forEach(id=>{
+
+        if(!document.getElementById(id)){
+
+            console.warn("Élément introuvable :",id);
+
+        }
+
+    });
 
 }
 
+//====================================================
+// FERMER LES SUGGESTIONS
+//====================================================
+
+document.addEventListener("click",function(e){
+
+    const recherche=document.querySelector(".recherche");
+
+    if(!recherche){
+
+        return;
+
+    }
+
+    if(!recherche.contains(e.target)){
+
+        const suggestions=
+        document.getElementById("suggestions");
+
+        if(suggestions){
+
+            suggestions.innerHTML="";
+
+        }
+
+    }
+
+});
+
+//====================================================
+// INITIALISATION FINALE
+//====================================================
+
+document.addEventListener("DOMContentLoaded",function(){
+
+    verifierElements();
+
+    afficherPanier();
+
+    console.log("✅ Le Prestige V3 chargé avec succès.");
+
+});
 
 
