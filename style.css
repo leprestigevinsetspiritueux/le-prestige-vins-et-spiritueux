@@ -1530,13 +1530,12 @@ footer p{
   }
 
 }
-
 #retour-haut{
     position:fixed;
 
     top:100px;
-    bottom:auto;
     right:20px;
+    bottom:auto;
 
     width:55px;
     height:55px;
@@ -1556,8 +1555,6 @@ footer p{
     cursor:pointer;
 
     z-index:10000;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.35);
 }
 /* =========================
    PANIER LATÉRAL
