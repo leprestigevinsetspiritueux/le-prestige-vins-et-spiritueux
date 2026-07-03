@@ -1445,130 +1445,6 @@ footer p{
 /* VERSION MOBILE */
 /* ========================================= */
 
-@media screen and (max-width:768px){
-
-nav{
-    flex-direction:column;
-    gap:15px;
-    padding:15px;
-}
-
-nav ul{
-    flex-direction:column;
-    align-items:center;
-    gap:15px;
-}
-
-.hero h1{
-    font-size:30px;
-}
-
-.hero p{
-    font-size:16px;
-}
-
-.produits{
-    grid-template-columns:1fr;
-}
-
-.carte{
-    width:100%;
-}
-
-.carte img{
-    height:220px;
-    object-fit:cover;
-}
-
-.actions{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.actions button,
-.actions .btn-commander{
-    width:100%;
-}
-
-.panier{
-    width:95%;
-    margin:auto;
-}
-
-.ligne-panier{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    padding:15px;
-    border-bottom:1px solid #444;
-}
-
-.infos-panier{
-    width:100%;
-    text-align:left;
-}
-
-.quantite-zone{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-    width:100%;
-}
-
-.btn-supprimer{
-    width:45px;
-    height:45px;
-}
-footer{
-    padding:30px 20px;
-    text-align:center;
-}
-
-.avis-card{
-    margin-bottom:20px;
-}
-
-.formulaire-avis input,
-.formulaire-avis textarea{
-
-    width:100%;
-
-    max-width:600px;
-
-    display:block;
-
-    margin:15px auto;
-
-    padding:18px;
-
-    font-size:18px;
-
-    border:2px solid #d4af37;
-
-    border-radius:12px;
-
-    background:#222;
-
-    color:#fff;
-
-    box-sizing:border-box;
-    
-    min-height:180px;
-
-    resize:vertical;
-
-}
-
-}
-
-.btn-avis{
-    width:100%;
-}
-
-}
-
 /* Version mobile */
 
 @media (max-width:768px){
@@ -1637,6 +1513,7 @@ footer{
     to{
         opacity:1;
         transform:translateY(0);
+    }
     }
 
 /* Animation des cartes */
