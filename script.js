@@ -36,12 +36,18 @@ function sauvegarderPanier(){
 
 function ouvrirPanier(){
 
-    panierLateral.classList.add("ouvert");
+    const panierLateral = document.getElementById("panier-lateral");
+    const overlayPanier = document.getElementById("overlay-panier");
 
+    if(!panierLateral || !overlayPanier){
+        console.error("Panier ou overlay introuvable.");
+        return;
+    }
+
+    panierLateral.classList.add("ouvert");
     overlayPanier.style.display = "block";
 
 }
-
 //====================================================
 // FERMER PANIER
 //====================================================
