@@ -880,8 +880,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
     afficherPanier();
 
-    console.log("✅ Le Prestige V3 chargé avec succès.");
-
 });
+
 
 
