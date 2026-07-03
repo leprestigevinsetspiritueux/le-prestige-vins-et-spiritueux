@@ -1642,34 +1642,31 @@ footer{
 }
 
 #retour-haut{
-    position:fixed;
-    
-    right:20px;
-    bottom:180px;
-    
-    width:45px;
-    height:45px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
 
-    display:none;
-    justify-content:center;
-    align-items:center;
+    width: 55px;
+    height: 55px;
 
-    background:#666;
-    color:white;
+    border: none;
+    border-radius: 50%;
 
-    border:none; 
-    border-radius:50%;
+    background: #d4af37;
+    color: #111;
 
-    font-size:20px;
-    cursor:pointer;
+    font-size: 24px;
+    cursor: pointer;
 
-    box-shadow:0 4px 10px rgba(0,0,0,.3);
+    display: none;
 
-    transition:0.3s;
+    align-items: center;
+    justify-content: center;
 
-    z-index:999;
+    z-index: 9999;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.35);
 }
-
 /* =========================
    PANIER LATÉRAL
 ========================= */
