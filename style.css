@@ -1559,19 +1559,6 @@ footer{
 
 }
 
-/* ========================================= */
-/* MENU HAMBURGER */
-/* ========================================= */
-
-.menu-toggle{
-    display:none;
-    background:none;
-    border:none;
-    color:#d4af37;
-    font-size:40px;
-    cursor:pointer;
-}
-
 /* Version mobile */
 
 @media (max-width:768px){
@@ -1598,51 +1585,30 @@ footer{
     padding-top:120px;
 }
 
-    .menu-toggle{
-    width:60px;
-    height:60px;
-    margin:0 auto;
-    display:block;
+ #menu{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:18px;
+    width:100%;
 }
 
-    #menu{
-        display:none;
-        flex-direction:column;
-        width:100%;
-        margin-top:15px;
-        background:#1b1b1b;
-        border-radius:12px;
-        overflow:hidden;
-    }
-
-    #menu.active{
-        display:flex;
-    }
-
-    #menu a{
-        display:block;
-        width:100%;
-        padding:18px;
-        text-align:center;
-        color:white;
-        text-decoration:none;
-        border-bottom:1px solid #333;
-        font-size:20px;
-    }
-
-    #menu a:last-child{
-        border-bottom:none;
-    }
-
+#menu a{
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    padding:8px 10px;
+    transition:.3s;
 }
-    #menu a:hover{
-        background:#222;
-    }
+
+#menu a:hover{
+    color:#D4AF37;
+}
 
     #menu.actif{
     display:flex;
-}
-
 }
 
 /* Animation du menu */
@@ -1650,10 +1616,6 @@ footer{
 #menu{
     transition: all 0.35s ease;
     overflow: hidden;
-}
-
-#menu.active{
-    animation: apparitionMenu .35s ease;
 }
 
 @keyframes apparitionMenu{
