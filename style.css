@@ -1856,14 +1856,16 @@ footer{
         border:none;
     }
 
-    nav{
-        width:100%;
-        max-width:none;
-        padding:10px 25px;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
+  nav{
+    width:100%;
+    max-width:none;
+    left:0;
+    transform:none;
+    padding:10px 25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
 }
 
