@@ -1916,3 +1916,8 @@ footer{
     }
 
 }
+
+#panier-lateral .carte{
+    min-height:unset;
+}
+
