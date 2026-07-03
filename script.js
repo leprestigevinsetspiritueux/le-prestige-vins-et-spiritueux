@@ -813,12 +813,6 @@ window.onerror=function(message,source,line){
 
 };
 
-//====================================================
-// LE PRESTIGE V3
-// FINALISATION
-//====================================================
-
-// Vérifier les éléments essentiels
 function verifierElements(){
 
     const ids = [
