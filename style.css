@@ -1534,7 +1534,8 @@ footer p{
 #retour-haut{
     position:fixed;
 
-    bottom:160px;
+    top:100px;
+    bottom:auto;
     right:20px;
 
     width:55px;
