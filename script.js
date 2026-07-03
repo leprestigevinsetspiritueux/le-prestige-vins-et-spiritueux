@@ -620,30 +620,5 @@ function fermerPanier(){
 
 }
 
-    const etoiles = "⭐".repeat(noteSelectionnee);
-
-    const message =
-`Bonjour Le Prestige Vins et Spiritueux,
-
-Je souhaite laisser un avis.
-
-👤 Nom : ${nom}
-
-⭐ Note : ${etoiles}
-
-💬 Avis :
-${commentaire}
-
-Merci.`;
-
-    window.open(
-        "https://wa.me/2290197592841?text=" + encodeURIComponent(message),
-        "_blank"
-    );
-
-    document.getElementById("nom-client").value = "";
-    document.getElementById("commentaire-client").value = "";
-
-}
 
 
