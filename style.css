@@ -1798,21 +1798,24 @@ nav{
         text-align:center;
     }
 
-    #menu a{
-        display:block;
-        color:#fff;
-        font-size:16px;
-        font-weight:bold;
-        text-decoration:none;
-        white-space:nowrap;
-    }
+   #menu a{
+    display:block;
+    color:#D4AF37;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:.3s;
+}
 
-     #menu a:last-child{
-        grid-column:1 / 4;
-        margin-top:8px;
-        color:#D4AF37;
-        font-size:18px;
-    }
+#menu a:hover{
+    color:#fff;
+}
+
+#menu a:last-child{
+    grid-column:1 / 4;
+    margin-top:8px;
+    font-size:18px;
 }
 
 #contenu-panier{
