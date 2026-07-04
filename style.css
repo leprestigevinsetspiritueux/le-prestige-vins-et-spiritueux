@@ -1520,9 +1520,27 @@ footer p{
 }
 
 .footer-panier button{
-
     width:100%;
+    display:block;
 
+    padding:16px 20px;
+
+    background:#25D366;
+    color:#fff;
+
+    border:none;
+    border-radius:12px;
+
+    font-size:20px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.footer-panier button:hover{
+    background:#1faa52;
 }
 
 .carte-avis{
