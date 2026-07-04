@@ -1864,5 +1864,10 @@ nav{
         margin-top:15px;
     }
 }
+    @media (min-width:769px){
+    h1{
+        font-size:52px;
+    }
+}
 
 
