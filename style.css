@@ -1277,16 +1277,22 @@ footer p{
 }
 
 .ligne-panier{
-    display:grid;
-    grid-template-columns: minmax(180px,1fr) auto;
-    gap:20px;
+    display:flex;
+    justify-content:space-between;
     align-items:center;
+    gap:20px;
     padding:20px;
 }
 
 .infos-panier{
-    min-width:0;
     flex:1;
+}
+
+.actions-panier{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-shrink:0;
 }
 
 .quantite-zone{
@@ -1444,7 +1450,7 @@ footer p{
     position: fixed;
     left: auto;
     right: 20px;
-    bottom: 210px;
+    bottom: 200px;
     width: 55px;
     height: 55px;
     display: none;
