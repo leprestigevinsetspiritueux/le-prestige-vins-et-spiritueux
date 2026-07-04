@@ -1691,10 +1691,11 @@ footer p{
 }
 
 .actions-panier span{
-    min-width:35px;
-    text-align:center;
-    font-size:20px;
+    color:#fff;
     font-weight:bold;
+    font-size:22px;
+    min-width:30px;
+    text-align:center;
 }
 /* Empêcher tout débordement horizontal */
 html,
