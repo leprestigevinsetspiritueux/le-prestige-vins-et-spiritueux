@@ -1478,7 +1478,7 @@ footer p{
     overflow-y:auto;
     transition:.35s;
     z-index:9999;
-    padding:80px 20px 20px;
+    padding:120px 20px 20px;
     box-sizing:border-box;
 }
 
@@ -1488,7 +1488,7 @@ footer p{
 
 .fermer-panier{
     position:absolute;
-    top:70px;
+    top:25px;
     right:20px;     
     
     width:42px;
@@ -1766,6 +1766,43 @@ nav{
     position:relative;
     z-index:100002 !important;
     pointer-events:auto !important;
+}
+
+@media (max-width:768px){
+
+    nav{
+        padding:10px;
+    }
+
+    #menu{
+        display:flex;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        align-items:center;
+        gap:15px;
+
+        overflow-x:auto;
+        overflow-y:hidden;
+
+        white-space:nowrap;
+
+        -webkit-overflow-scrolling:touch;
+
+        scrollbar-width:none;
+    }
+
+    #menu::-webkit-scrollbar{
+        display:none;
+    }
+
+    #menu a{
+        font-size:16px;
+        flex-shrink:0;
+    }
+
+    #panier-lateral{
+        padding-top:120px;
+    }
 }
 
 
