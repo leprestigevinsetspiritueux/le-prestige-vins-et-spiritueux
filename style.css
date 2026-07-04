@@ -1260,17 +1260,22 @@ footer p{
 
 .ligne-panier{
     display:grid;
-    grid-template-columns: 1fr auto;
-    align-items:center;
+    grid-template-columns:1fr auto;
     gap:20px;
-    width:100%;
+    align-items:center;
+
+    background:#1b1b1b;
+    border:1px solid #333;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:15px;
 }
 
 .infos-panier{
-    width:100%;
-    min-width:0;
+    padding-right:10px;
+    font-size:20px;
+    line-height:1.5;
 }
-
 .quantite-zone{
     display:flex;
     align-items:center;
