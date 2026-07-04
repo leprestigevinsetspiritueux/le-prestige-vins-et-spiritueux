@@ -1469,25 +1469,11 @@ footer p{
 
 }
 #retour-haut{
-    position:fixed;
-    right:20px;
-    bottom:25px;
-    top:auto;
-
-    width:55px;
-    height:55px;
-
-    display:none;
-    align-items:center;
-    justify-content:center;
-
-    border:none;
-    border-radius:50%;
-    background:#d4af37;
-    color:#111;
-    font-size:24px;
-    cursor:pointer;
-    z-index:10000;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    top: auto;
+    z-index: 9999;
 }
 /* =========================
    PANIER LATÉRAL
