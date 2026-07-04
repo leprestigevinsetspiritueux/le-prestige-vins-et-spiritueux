@@ -1711,6 +1711,16 @@ body{
     overflow-x:hidden;
 }
 
+html,
+body{
+    overflow-x:hidden !important;
+    width:100%;
+}
+
+*{
+    box-sizing:border-box;
+}
+
 
 
 
