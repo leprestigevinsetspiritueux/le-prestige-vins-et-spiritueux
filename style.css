@@ -1698,3 +1698,27 @@ body{
 *{
     box-sizing:border-box;
 }
+
+.panier-vide{
+    min-height:120px;
+    display:flex;
+    align-items:center;
+}
+
+.panier-vide .infos-panier{
+    width:100%;
+    text-align:center;
+}
+
+.panier-vide strong{
+    display:block;
+    font-size:24px;
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.panier-vide span{
+    color:#ccc;
+    font-size:18px;
+}
+
