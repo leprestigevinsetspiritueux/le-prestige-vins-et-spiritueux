@@ -1504,7 +1504,15 @@ footer p{
     cursor: pointer;
 
     z-index: 30000;
+    display: none;
 }
+
+#panier-lateral.ouvert .fermer-panier{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ==========================
    BAS DU PANIER FIXE
 ========================== */
