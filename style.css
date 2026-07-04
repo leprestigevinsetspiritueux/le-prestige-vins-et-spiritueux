@@ -1716,12 +1716,7 @@ footer p{
 
 @media (min-width:769px){
 
-    /* Masquer le bouton hamburger */
-    .menu-toggle{
-        display:none !important;
-    }
-
-    /* Afficher le menu horizontal */
+/* Afficher le menu horizontal */
     #menu{
         display:flex !important;
         flex-direction:row;
