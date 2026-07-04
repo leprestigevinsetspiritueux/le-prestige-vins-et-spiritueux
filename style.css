@@ -1753,5 +1753,21 @@ body{
     font-size:18px;
 }
 
+nav{
+    z-index:100000 !important;
+}
+
+#menu{
+    position:relative;
+    z-index:100001 !important;
+}
+
+#menu a{
+    position:relative;
+    z-index:100002 !important;
+    pointer-events:auto !important;
+}
+
+
 
 
