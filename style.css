@@ -1689,11 +1689,12 @@ footer p{
     align-items:center;
     justify-content:center;
     gap:10px;
+    
 }
 
 .actions-panier button{
-    width:38px;
-    height:38px;
+    width:36px;
+    height:36px;
     border:none;
     border-radius:8px;
     background:#B00000;
