@@ -1263,8 +1263,8 @@ footer p{
     gap:20px;
     align-items:center;
 
-    background:#4d4d4d;
-    border:1px solid #555;
+   background:#5a1428;
+    border:1px solid #8c4b5d;
     border-radius:15px;
     padding:20px;
     margin-bottom:15px;
@@ -1474,7 +1474,7 @@ footer p{
     width:520px;
     max-width:100%;
     height:100%;
-    background:#3a3a3a;
+    background:#3b0010;
     overflow-y:auto;
     transition:.35s;
     z-index:9999;
