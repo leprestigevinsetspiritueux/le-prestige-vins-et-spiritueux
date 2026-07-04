@@ -1716,6 +1716,13 @@ body{
     box-sizing:border-box;
 }
 
+#liste-panier .carte{
+    margin-bottom:15px;
+    padding:20px;
+    border-radius:15px;
+}
+
+
 
 
 
