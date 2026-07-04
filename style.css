@@ -1478,7 +1478,7 @@ footer p{
     overflow-y:auto;
     transition:.35s;
     z-index:9999;
-    padding:20px;
+    padding:80px 20px 20px;
     box-sizing:border-box;
 }
 
@@ -1488,8 +1488,8 @@ footer p{
 
 .fermer-panier{
     position:absolute;
-    top:20px;
-    left:20px;     
+    top:70px;
+    right:20px;     
     
     width:42px;
     height:42px;
@@ -1503,7 +1503,7 @@ footer p{
     font-size:24px;
     cursor:pointer;
 
-    z-index:10000;
+    z-index:100003;
 }
 /* ==========================
    BAS DU PANIER FIXE
