@@ -1487,23 +1487,23 @@ footer p{
 }
 
 .fermer-panier{
-    position:absolute;
-    top:25px;
-    right:20px;     
-    
-    width:42px;
-    height:42px;
+    position: fixed;
+    top: 80px;
+    right: 20px;
 
-    border:none;
-    border-radius:50%;
+    width: 42px;
+    height: 42px;
 
-    background:#d40000;
-    color:#fff;
+    border: none;
+    border-radius: 50%;
 
-    font-size:24px;
-    cursor:pointer;
+    background: #d40000;
+    color: #fff;
 
-    z-index:100003;
+    font-size: 24px;
+    cursor: pointer;
+
+    z-index: 30000;
 }
 /* ==========================
    BAS DU PANIER FIXE
@@ -1827,8 +1827,8 @@ nav{
 
     /* Descend la croix */
     .fermer-panier{
-        top:95px !important;
-        right:20px !important;
+        top:135px; !important;
+        right:15px; !important;
     }
 
     /* Descend légèrement le titre */
