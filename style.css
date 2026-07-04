@@ -1693,4 +1693,34 @@ footer p{
     min-height:unset;
 }
 
+.actions-panier{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+.actions-panier button{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:8px;
+    background:#B00000;
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.actions-panier span{
+    min-width:30px;
+    text-align:center;
+    font-weight:bold;
+    font-size:18px;
+}
+
+
 
