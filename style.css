@@ -1468,8 +1468,9 @@ footer p{
 
 #retour-haut{
     position: fixed;
-    right: 20px;
-    bottom: 20px;
+    right: 20px !important;
+    left: auto !important;
+    bottom: 20px !important;
     width: 55px;
     height: 55px;
     display: none;
