@@ -1698,32 +1698,3 @@ body{
 *{
     box-sizing:border-box;
 }
-
-.infos-panier{
-    flex:1;
-    padding-right:20px;
-    color:#fff !important;
-    font-size:22px !important;
-    line-height:1.6;
-}
-
-.infos-panier strong{
-    display:block;
-    font-size:24px !important;
-    color:#fff !important;
-    margin-bottom:10px;
-}
-
-.ligne-panier{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
-    margin-bottom:15px;
-    border-radius:15px;
-    background:#1b1b1b;
-}
-
-
-
-
