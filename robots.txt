@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leprestigevinsetspiritueux.github.io/le-prestige-vins-et-spiritueux/sitemap.xml
