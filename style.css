@@ -327,6 +327,8 @@ section{
 
     padding:10px 14px;
 
+    min-width:0;
+
 }
 
 .contenu h3{
