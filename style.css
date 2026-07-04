@@ -1286,13 +1286,37 @@ footer p{
 
 .infos-panier{
     flex:1;
+    font-size:18px;
+    line-height:1.6;
 }
 
 .actions-panier{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
     flex-shrink:0;
+}
+
+.actions-panier button{
+    width:46px;
+    height:46px;
+    border:none;
+    border-radius:10px;
+    background:#B00000;
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.actions-panier span{
+    min-width:35px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
 }
 
 .quantite-zone{
@@ -1482,8 +1506,8 @@ footer p{
 #panier-lateral{
     position:fixed;
     top:0;
-    right:-450px;
-    width:450px;
+    right:-520px;
+    width:520px;
     max-width:100%;
     height:100%;
     background:#111;
