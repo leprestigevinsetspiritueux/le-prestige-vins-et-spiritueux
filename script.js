@@ -120,7 +120,7 @@ function afficherPanier(){
 
         listePanier.innerHTML += `
 
-<div class="ligne-panier">
+<div class="carte ligne-panier">
 
 <div class="infos-panier">
 
