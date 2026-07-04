@@ -1316,37 +1316,6 @@ footer p{
     cursor:pointer;
 }
 
-.ligne-panier{
-    display:grid;
-    grid-template-columns: 1fr 160px 60px;
-    align-items:center;
-    gap:20px;
-    padding:15px 0;
-    border-bottom:1px solid #ddd;
-}
-
-.infos-panier{
-    text-align:left;
-}
-
-.quantite-zone{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-}
-
-.btn-supprimer{
-    width:45px;
-    height:45px;
-    border:none;
-    border-radius:8px;
-    background:#c62828;
-    color:white;
-    cursor:pointer;
-    justify-self:center;
-}
-
 /* ===================================== */
 /* AVIS CLIENTS */
 /* ===================================== */
