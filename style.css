@@ -1259,22 +1259,16 @@ footer p{
 }
 
 .ligne-panier{
-    background:#1b1b1b;
-    border:1px solid #333;
-    border-radius:15px;
-    padding:20px;
-    margin-bottom:15px;
-
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns: 1fr auto;
     align-items:center;
     gap:20px;
+    width:100%;
 }
 
 .infos-panier{
-    flex:1;
-    font-size:18px;
-    line-height:1.6;
+    width:100%;
+    min-width:0;
 }
 
 .quantite-zone{
@@ -1648,6 +1642,7 @@ footer p{
     display:flex;
     align-items:center;
     gap:12px;
+    white-space:nowrap;
 }
 
 .actions-panier button{
@@ -1703,32 +1698,6 @@ body{
 *{
     box-sizing:border-box;
 }
-
-#liste-panier .carte{
-    margin-bottom:15px;
-    padding:20px;
-    border-radius:15px;
-}
-
-.ligne-panier{
-    min-height:120px !important;
-    background:red !important;
-}
-
-.infos-panier{
-    background:blue !important;
-    color:white !important;
-    font-size:20px !important;
-}
-
-.actions-panier{
-    background:green !important;
-}
-
-
-
-
-
 
 
 
