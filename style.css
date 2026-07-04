@@ -1659,6 +1659,12 @@ footer p{
         margin:0;
     }
 
+     #menu a{
+        font-size:20px;
+        font-weight:bold;
+        letter-spacing:0.5px;
+    }
+
     #menu li{
         width:auto;
         border:none;
