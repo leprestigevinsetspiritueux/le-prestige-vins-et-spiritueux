@@ -1271,22 +1271,23 @@ footer p{
 }
 
 .ligne-panier{
-    display:flex;
+    display:grid;
+    grid-template-columns: minmax(180px,1fr) auto;
+    gap:20px;
     align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    padding:15px;
-    border-bottom:1px solid #ddd;
+    padding:20px;
 }
 
 .infos-panier{
+    min-width:0;
     flex:1;
 }
 
 .quantite-zone{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
+    flex-shrink:0;
 }
 
 .quantite-btn{
@@ -1470,8 +1471,8 @@ footer p{
     position:fixed;
     top:0;
     right:-420px;
-    width:380px;
-    max-width:95%;
+    width:450px;
+    max-width:98%;
     height:100%;
     background:#111;
     overflow-y:auto;
