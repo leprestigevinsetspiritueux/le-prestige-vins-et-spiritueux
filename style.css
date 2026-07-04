@@ -1289,35 +1289,6 @@ footer p{
     line-height:1.6;
 }
 
-.actions-panier{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    flex-shrink:0;
-}
-
-.actions-panier button{
-    width:46px;
-    height:46px;
-    border:none;
-    border-radius:10px;
-    background:#B00000;
-    color:#fff;
-    font-size:24px;
-    font-weight:bold;
-    cursor:pointer;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.actions-panier span{
-    min-width:35px;
-    text-align:center;
-    font-size:22px;
-    font-weight:bold;
-}
-
 .quantite-zone{
     display:flex;
     align-items:center;
@@ -1688,21 +1659,17 @@ footer p{
 .actions-panier{
     display:flex;
     align-items:center;
-    justify-content:center;
     gap:12px;
-    flex-shrink:0;
-    
 }
 
 .actions-panier button{
-    width:36px;
-    height:36px;
+    width:46px;
+    height:46px;
     border:none;
-    border-radius:8px;
+    border-radius:10px;
     background:#B00000;
     color:#fff;
-    font-size:20px;
-    font-weight:bold;
+    font-size:22px;
     cursor:pointer;
     display:flex;
     align-items:center;
@@ -1710,13 +1677,11 @@ footer p{
 }
 
 .actions-panier span{
-    width:24px;
-    min-width:30px;
+    min-width:35px;
     text-align:center;
+    font-size:20px;
     font-weight:bold;
-    font-size:18px;
 }
-
 /* Empêcher tout débordement horizontal */
 html,
 body{
@@ -1750,6 +1715,7 @@ body{
 *{
     box-sizing:border-box;
 }
+
 
 
 
