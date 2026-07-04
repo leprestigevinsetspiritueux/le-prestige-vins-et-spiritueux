@@ -1802,3 +1802,39 @@ nav{
     }
 }
 
+#contenu-panier{
+    overflow-y: auto;
+    max-height: calc(100vh - 240px);
+    padding-bottom: 140px;
+}
+
+.footer-panier{
+    position: sticky;
+    bottom: 0;
+    background: #111;
+    padding: 15px;
+    border-top: 2px solid gold;
+    z-index: 10;
+}
+
+/* Téléphone */
+@media (max-width:768px){
+
+    /* Descend le panneau du panier */
+    #panier-lateral{
+        padding-top:120px !important;
+    }
+
+    /* Descend la croix */
+    .fermer-panier{
+        top:95px !important;
+        right:20px !important;
+    }
+
+    /* Descend légèrement le titre */
+    #panier-lateral h2{
+        margin-top:15px;
+    }
+}
+
+
