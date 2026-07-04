@@ -1710,6 +1710,21 @@ body{
     border-radius:15px;
 }
 
+.ligne-panier{
+    min-height:120px !important;
+    background:red !important;
+}
+
+.infos-panier{
+    background:blue !important;
+    color:white !important;
+    font-size:20px !important;
+}
+
+.actions-panier{
+    background:green !important;
+}
+
 
 
 
