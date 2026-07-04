@@ -1485,6 +1485,7 @@ footer p{
     transition:.35s;
     z-index:9999;
     padding:20px;
+    box-sizing:border-box;
 }
 
 #panier-lateral.ouvert{
