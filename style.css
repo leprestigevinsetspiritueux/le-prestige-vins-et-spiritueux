@@ -1275,6 +1275,14 @@ footer p{
     padding-right:10px;
     font-size:20px;
     line-height:1.5;
+    color:#fff;
+}
+
+.infos-panier strong{
+    color:#fff;
+    font-size:22px;
+    display:block;
+    margin-bottom:8px;
 }
 .quantite-zone{
     display:flex;
