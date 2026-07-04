@@ -613,30 +613,13 @@ section{
 /* ===================================================== */
 
 #panier .carte{
-
-    max-width:700px;
-
-    margin:auto;
-
+    width:100%;
+    max-width:none;
 }
 
 #liste-panier{
 
     margin-top:20px;
-
-}
-
-#liste-panier div{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:12px;
-
-    border-bottom:1px solid #444;
 
 }
 
@@ -1276,11 +1259,16 @@ footer p{
 }
 
 .ligne-panier{
+    background:#1b1b1b;
+    border:1px solid #333;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:15px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:20px;
-    padding:20px;
 }
 
 .infos-panier{
