@@ -106,10 +106,14 @@ function afficherPanier(){
 
     if(panier.length === 0){
 
-        listePanier.innerHTML =
-
-        "<p>Votre panier est vide.</p>";
-
+        listePanier.innerHTML = `
+        <div class="ligne-panier panier-vide">
+        <div class="infos-panier">
+        <strong>Votre panier est vide</strong>
+        <span>Ajoutez un produit pour commencer votre commande.</span>
+    </div>
+</div>
+`;
     }
 
     panier.forEach((produit,index)=>{
