@@ -1870,4 +1870,19 @@ nav{
     }
 }
 
+.prix del{
+    color:#d60000;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:line-through;
+    text-decoration-thickness:3px;
+}
+
+.prix strong{
+    color:#D4AF37;
+    font-size:28px;
+    font-weight:900;
+}
+    
+
 
