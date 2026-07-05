@@ -1883,6 +1883,19 @@ nav{
     font-size:28px;
     font-weight:900;
 }
+
+.prix .ancien{
+    color:#d40000 !important;
+    text-decoration:line-through !important;
+    font-weight:bold;
+}
+
+.prix .nouveau{
+    color:#c9a227 !important;
+    font-size:22px;
+    font-weight:bold;
+}
+    
     
 
 
