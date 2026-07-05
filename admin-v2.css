@@ -1,0 +1,178 @@
+/* ===========================
+   LE PRESTIGE ADMIN V2
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    padding:20px;
+}
+
+header{
+    background:#111;
+    color:white;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+header h1{
+    font-size:24px;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#8b0000;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+}
+
+textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+input[type=file]{
+    border:none;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.btn-save{
+    background:#8b0000;
+    color:white;
+}
+
+.btn-save:hover{
+    background:#b30000;
+}
+
+.btn-reset{
+    background:#444;
+    color:white;
+}
+
+.btn-reset:hover{
+    background:#222;
+}
+
+.preview{
+    margin-top:20px;
+    text-align:center;
+}
+
+.preview img{
+    width:220px;
+    max-width:100%;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th{
+    background:#111;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+table tr:nth-child(even){
+    background:#fafafa;
+}
+
+.stock-ok{
+    color:green;
+    font-weight:bold;
+}
+
+.stock-low{
+    color:orange;
+    font-weight:bold;
+}
+
+.stock-out{
+    color:red;
+    font-weight:bold;
+}
+
+.action{
+    padding:8px 12px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    color:white;
+}
+
+.edit{
+    background:#0077cc;
+}
+
+.delete{
+    background:#d60000;
+}
+
+@media(max-width:768px){
+
+table{
+    display:block;
+    overflow-x:auto;
+}
+
+header h1{
+    font-size:20px;
+}
+
+}
