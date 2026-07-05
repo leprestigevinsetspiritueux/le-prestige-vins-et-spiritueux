@@ -1,145 +1,163 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Administration - Le Prestige</title>
+<title>Administration | Le Prestige Vins et Spiritueux</title>
 
-<link rel="stylesheet" href="admin-mobile.css">
+<link rel="stylesheet" href="admin-v2.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="header-admin">
 
-<h1>🍷 Le Prestige</h1>
+    <img
+        src="logo.png"
+        alt="Logo Le Prestige Vins et Spiritueux"
+        class="logo-admin">
 
-<p>Administration des produits</p>
+    <div class="titre-admin">
+
+        <h1>
+            LE PRESTIGE
+            <br>
+            Vins et Spiritueux
+        </h1>
+
+        <p>
+            Tableau de bord Administrateur
+        </p>
+
+    </div>
 
 </header>
 
 <div class="container">
 
-<div class="formulaire">
+    <form id="formProduit" class="formulaire">
 
-<h2>Ajouter un produit</h2>
+        <h2>➕ Ajouter un produit</h2>
 
-<input type="file" id="photo" accept="image/*">
+        <input
+            type="file"
+            id="photo"
+            accept="image/*">
 
-<img id="imagePreview">
+        <img
+            id="imagePreview"
+            class="preview"
+            style="display:none;">
 
-<input type="text" id="nom" placeholder="Nom du produit">
+        <input
+            type="text"
+            id="nom"
+            placeholder="Nom du produit">
 
-<select id="categorie">
+        <select id="categorie">
 
-<option value="vin">Vin</option>
+            <option value="">Choisir une catégorie</option>
 
-<option value="champagne">Champagne</option>
+            <option value="vin">Vin</option>
+            <option value="champagne">Champagne</option>
+            <option value="whisky">Whisky</option>
+            <option value="cognac">Cognac</option>
+            <option value="rhum">Rhum</option>
+            <option value="liqueur">Liqueur</option>
+            <option value="gin">Gin</option>
+            <option value="vodka">Vodka</option>
 
-<option value="whisky">Whisky</option>
+        </select>
 
-<option value="rhum">Rhum</option>
+        <textarea
+            id="description"
+            placeholder="Description du produit"></textarea>
 
-<option value="liqueur">Liqueur</option>
+        <input
+            type="number"
+            id="prixAchat"
+            placeholder="Prix d'achat">
 
-<option value="gin">Gin</option>
+        <input
+            type="number"
+            id="ancienPrix"
+            placeholder="Ancien prix (Promo)">
 
-<option value="vodka">Vodka</option>
+        <input
+            type="number"
+            id="prixVente"
+            placeholder="Prix de vente">
 
-</select>
+        <input
+            type="number"
+            id="stock"
+            placeholder="Stock disponible">
 
-<textarea
-id="description"
-placeholder="Description">
-</textarea>
+        <select id="badge">
 
-<input
-type="number"
-id="prixAchat"
-placeholder="Prix d'achat">
+            <option value="">Aucun badge</option>
 
-<input
-type="number"
-id="ancienPrix"
-placeholder="Ancien prix (optionnel)">
+            <option value="PROMO">🔥 PROMO</option>
 
-<input
-type="number"
-id="prixVente"
-placeholder="Prix de vente">
+            <option value="NOUVEAU">🆕 NOUVEAU</option>
 
-<input
-type="number"
-id="stock"
-placeholder="Stock">
+        </select>
 
-<select id="badge">
+        <button
+            type="button"
+            id="btnAjouter"
+            class="btn-save">
 
-<option value="">Aucun badge</option>
+            💾 Enregistrer le produit
 
-<option value="NOUVEAU">🆕 Nouveau</option>
+        </button>
 
-<option value="PROMO">🔥 Promo</option>
+    </form>
 
-<option value="BEST">⭐ Best Seller</option>
+    <section class="gestion">
 
-</select>
+        <h2>📦 Gestion des produits</h2>
 
-<button id="btnAjouter">
+        <input
+            type="search"
+            id="recherche"
+            placeholder="🔍 Rechercher un produit...">
 
-➕ Ajouter le produit
+        <table>
 
-</button>
+            <thead>
 
-</div>
+                <tr>
 
-<div class="gestion">
+                    <th>Photo</th>
+                    <th>Produit</th>
+                    <th>Catégorie</th>
+                    <th>Prix Achat</th>
+                    <th>Prix Vente</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
 
-<h2>Gestion du stock</h2>
+                </tr>
 
-<input
-type="search"
-id="recherche"
-placeholder="Rechercher un produit...">
+            </thead>
 
-<table>
+            <tbody id="listeProduits">
 
-<thead>
+            </tbody>
 
-<tr>
+        </table>
 
-<th>Produit</th>
-
-<th>Achat</th>
-
-<th>Vente</th>
-
-<th>Stock</th>
-
-<th>Marge</th>
-
-<th>Actions</th>
-
-</tr>
-
-</thead>
-
-<tbody id="listeProduits">
-
-</tbody>
-
-</table>
-
-</div>
+    </section>
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
-<script src="admin-mobile.js"></script>
+<script src="admin-v2.js"></script>
 
 </body>
 
