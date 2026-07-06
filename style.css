@@ -1263,15 +1263,15 @@ footer p{
 .infos-panier{
     padding-right:10px;
     font-size:15px;
-    line-height:1.5;
+    line-height:1.4;
     color:#fff;
 }
 
 .infos-panier strong{
     color:#fff;
-    font-size:22px;
+    font-size:18px;
     display:block;
-    margin-bottom:8px;
+    margin-bottom:6px;
 }
 .quantite-zone{
     display:flex;
