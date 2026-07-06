@@ -1892,6 +1892,12 @@ nav{
     font-size:22px;
     font-weight:bold;
 }
+
+.prix,
+.prix strong{
+    color: #D4AF37 !important;
+}
+    
     
     
     
