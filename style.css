@@ -1876,7 +1876,8 @@ nav{
 }
 
 .prix del{
-    color:#b8860b;
+    color:#d40000;
+    text-decoration-color:#d40000;
     font-size:22px;
     font-weight:bold;
     text-decoration:line-through;
