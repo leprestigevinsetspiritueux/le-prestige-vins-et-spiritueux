@@ -1021,7 +1021,7 @@ footer p{
 
     .prix{
 
-        font-size:22px;
+        font-size:28px;
 
     }
 
@@ -1869,48 +1869,29 @@ nav{
     }
 }
 
-.prix del{
-    color: #D4AF37 !important;
-    font-size:20px;
+.prix{
+    text-align:center;
+    color:#D4AF37;
+    font-size:28px;
     font-weight:bold;
-    text-decoration: line-through;
+    margin-top:10px;
+}
+
+.prix strong{
+    color:#D4AF37;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.prix del{
+    color:#b8860b;
+    font-size:22px;
+    font-weight:bold;
+    text-decoration:line-through;
     text-decoration-thickness:3px;
 }
 
-.prix strong{
-    color: #D4AF37 !important;
-    font-size:28px;
-    font-weight: bold;
-}
 
-.prix .ancien{
-    color:#d40000 !important;
-    text-decoration:line-through !important;
-    font-weight:bold;
-}
-
-.prix .nouveau{
-    color:#c9a227 !important;
-    font-size:28px;
-    font-weight:bold;
-}
-
-.prix,
-.prix strong{
-    color: #D4AF37 !important;
-}
-
-    .prix{
-    color:#D4AF37 !important;
-}
-
-.prix strong{
-    color:#D4AF37 !important;
-}
-
-.prix del{
-    color:#D4AF37 !important;
-}
     
     
     
