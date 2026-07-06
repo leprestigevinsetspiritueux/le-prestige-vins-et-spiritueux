@@ -1848,18 +1848,15 @@ nav{
 /* Téléphone */
 @media (max-width:768px){
 
-    /* Descend le panneau du panier */
     #panier-lateral{
         padding-top:120px !important;
     }
 
-    /* Descend la croix */
-    .fermer-panier{
+   .fermer-panier{
     top:135px !important;
     right:15px !important;
 }
 
-    /* Descend légèrement le titre */
     #panier-lateral h2{
         margin-top:15px;
     }
@@ -1871,17 +1868,17 @@ nav{
 }
 
 .prix del{
-    color:#d60000;
+    color: #D4AF37 !important;
     font-size:20px;
     font-weight:bold;
-    text-decoration:line-through;
+    text-decoration: line-through;
     text-decoration-thickness:3px;
 }
 
 .prix strong{
-    color:#D4AF37;
+    color: #D4AF37 !important;
     font-size:28px;
-    font-weight:900;
+    font-weight: bold;
 }
 
 .prix .ancien{
