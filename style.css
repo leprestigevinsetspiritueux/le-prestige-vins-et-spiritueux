@@ -1190,6 +1190,8 @@ footer p{
 
     z-index: 999999;
 
+    pointer-events: none;
+
 }
 .notification-panier.active{
 
