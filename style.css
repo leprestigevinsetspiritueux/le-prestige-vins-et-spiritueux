@@ -1164,34 +1164,33 @@ footer p{
 
 .notification-panier{
 
-    position:fixed;
+    position: fixed;
 
-    top:20px;
+    top: 100px;
 
-    right:20px;
+    right: 20px;
 
-    background:#2E7D32;
+    background: #2E7D32;
 
-    color:white;
+    color: white;
 
-    padding:15px 22px;
+    padding: 15px 22px;
 
-    border-radius:10px;
+    border-radius: 10px;
 
-    font-weight:bold;
+    font-weight: bold;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.35);
+    box-shadow: 0 5px 15px rgba(0,0,0,.35);
 
-    opacity:0;
+    opacity: 0;
 
-    transform:translateY(-20px);
+    transform: translateY(-20px);
 
-    transition:all .4s ease;
+    transition: all .4s ease;
 
-    z-index:9999;
+    z-index: 999999;
 
 }
-
 .notification-panier.active{
 
     opacity:1;
