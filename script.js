@@ -316,15 +316,19 @@ Sous-total : ${sousTotal.toLocaleString()} FCFA
 
 Merci de confirmer ma commande.`;
 
-    window.open(
+window.open(
+    "https://wa.me/2290197592841?text=" +
+    encodeURIComponent(message),
+    "_blank"
+);
 
-"https://wa.me/2290197592841?text="
+setTimeout(() => {
 
-+ encodeURIComponent(message),
+    document
+        .getElementById("confirmation-commande")
+        .classList.add("active");
 
-"_blank"
-
-    );
+}, 500);
 
 }
 
@@ -870,5 +874,72 @@ document.addEventListener("DOMContentLoaded",function(){
 
 });
 
+//=====================================
+// CONFIRMATION APRÈS COMMANDE
+//=====================================
+
+const popupConfirmation =
+    document.getElementById("confirmation-commande");
+
+const boutonVider =
+    document.getElementById("vider-panier-confirmation");
+
+const boutonGarder =
+    document.getElementById("garder-panier-confirmation");
+
+if(boutonVider){
+
+   boutonVider.addEventListener("click",function(){
+
+    popupConfirmation.querySelector(".confirmation-box").innerHTML=`
+
+        <div class="confirmation-fin">
+
+            <div class="confirmation-check">✅</div>
+
+            <h2>Merci pour votre confiance !</h2>
+
+            <p>
+
+                Votre commande est en cours de traitement.
+
+                <br><br>
+
+                Notre équipe vous répondra très prochainement sur WhatsApp.
+
+            </p>
+
+        </div>
+
+    `;
+
+    panier=[];
+
+    sauvegarderPanier();
+
+    afficherPanier();
+
+    setTimeout(function(){
+
+        popupConfirmation.classList.remove("active");
+
+        fermerPanier();
+
+    },2200);
+
+});
+}
+
+if(boutonGarder){
+
+    boutonGarder.addEventListener("click",function(){
+
+        popupConfirmation.classList.remove("active");
+
+        fermerPanier();
+
+    });
+
+}
 
 
