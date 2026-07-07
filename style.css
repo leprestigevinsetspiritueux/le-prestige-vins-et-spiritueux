@@ -2066,6 +2066,48 @@ nav{
 
 }
 
+.confirmation-fin{
+    text-align:center;
+    animation:fadeUp .4s ease;
+}
+
+.confirmation-check{
+    font-size:70px;
+    margin-bottom:20px;
+    animation:bounce .7s;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes bounce{
+
+    0%{
+        transform:scale(.5);
+    }
+
+    60%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+
 
     
     
