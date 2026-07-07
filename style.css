@@ -1925,6 +1925,146 @@ nav{
     }
 
 }
+/* =====================================
+   FENÊTRE DE CONFIRMATION
+===================================== */
+
+.confirmation-cache{
+    display:none;
+}
+
+#confirmation-commande{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+}
+
+#confirmation-commande.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.confirmation-box{
+
+    width:90%;
+    max-width:420px;
+
+    background:#2b0010;
+
+    border:2px solid #D4AF37;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+
+    animation:popup .3s ease;
+}
+
+.confirmation-box h2{
+
+    color:#D4AF37;
+
+    margin-bottom:20px;
+
+}
+
+.confirmation-box p{
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+}
+
+.confirmation-boutons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+#vider-panier-confirmation{
+
+    background:#25D366;
+
+    color:white;
+
+}
+
+#garder-panier-confirmation{
+
+    background:#6D071A;
+
+    color:white;
+
+}
+
+#vider-panier-confirmation,
+#garder-panier-confirmation{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:16px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#vider-panier-confirmation:hover{
+
+    background:#1FA851;
+
+}
+
+#garder-panier-confirmation:hover{
+
+    background:#8B0B22;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
 
 
     
