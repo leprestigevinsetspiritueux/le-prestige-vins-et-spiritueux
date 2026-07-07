@@ -1199,6 +1199,9 @@ footer p{
     transform:translateY(0);
 
 }
+.notification-panier{
+    display:block !important;
+}
 
 .quantite-btn{
     width:32px;
