@@ -88,7 +88,7 @@ function ajouterPanier(nom, prix){
 
     afficherPanier();
 
-    afficherNotification();
+    afficherNotification(nom);
 
 }
 
@@ -242,19 +242,21 @@ function viderPanier(){
 // NOTIFICATION
 //====================================================
 
-function afficherNotification(){
+function afficherNotification(nomProduit){
 
-    const notification=document.getElementById("notification-panier");
+    const notification =
+        document.getElementById("notification-panier");
 
     if(!notification){
-
         return;
-
     }
+
+    notification.innerHTML =
+        "✅ <strong>" + nomProduit + "</strong><br>ajouté au panier";
 
     notification.classList.add("active");
 
-    setTimeout(()=>{
+    setTimeout(function(){
 
         notification.classList.remove("active");
 
