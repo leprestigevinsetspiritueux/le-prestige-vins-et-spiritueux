@@ -260,7 +260,7 @@ function afficherNotification(nomProduit){
 
         notification.classList.remove("active");
 
-    },5000);
+   },2200);
 }
 
 //====================================================
