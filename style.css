@@ -1454,7 +1454,7 @@ footer p{
     flex-direction:column;
 
     background:#3b0010;
-    overflow-y:auto;
+    overflow:hidden;
     transition:.35s;
     z-index:9999;
     padding:150px 20px 30px;
@@ -1475,6 +1475,9 @@ footer p{
 }
 
 .footer-panier{
+    position:sticky;
+    bottom:0;
+    background:#111;
     flex-shrink:0;
 }
 
