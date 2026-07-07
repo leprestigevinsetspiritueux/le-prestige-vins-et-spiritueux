@@ -590,9 +590,8 @@ section{
 }
 
 #liste-panier{
-
     margin-top:20px;
-
+    overflow:visible;
 }
 
 #total{
@@ -1460,6 +1459,23 @@ footer p{
     z-index:9999;
     padding:150px 20px 30px;
     box-sizing:border-box;
+}
+
+#contenu-panier{
+    flex:1;
+    overflow-y:auto;
+    min-height:0;
+}
+
+#panier-lateral .carte{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    min-height:0;
+}
+
+.footer-panier{
+    flex-shrink:0;
 }
 
 #panier-lateral.ouvert{
