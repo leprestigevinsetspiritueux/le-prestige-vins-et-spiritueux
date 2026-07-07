@@ -635,30 +635,6 @@ document
 
 });
 
-//====================================================
-// NOTIFICATION PRODUIT AJOUTÉ
-//====================================================
-
-function afficherNotification(){
-
-    const notification =
-        document.getElementById("notification-panier");
-
-    if(!notification){
-
-        return;
-
-    }
-
-    notification.classList.add("visible");
-
-    setTimeout(function(){
-
-        notification.classList.remove("visible");
-
-    },2000);
-
-}
 
 //====================================================
 // RETOUR EN HAUT
