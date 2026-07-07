@@ -1891,6 +1891,16 @@ nav{
 
 }
 
+@media (max-width:768px){
+
+    #menu a:last-child{
+        position: relative;
+        z-index: 999999;
+        pointer-events: auto;
+    }
+
+}
+
 
     
     
