@@ -2581,3 +2581,48 @@ transform:translateY(0);
 }
 
 }
+
+/* =====================================
+   MESSAGE DE LA MAISON
+===================================== */
+
+.message-maison{
+
+padding:70px 20px 50px;
+
+text-align:center;
+
+}
+
+.separateur-maison{
+
+font-size:22px;
+
+color:#D4AF37;
+
+margin-bottom:20px;
+
+opacity:.9;
+
+}
+
+.message-maison p{
+
+margin:0;
+
+font-size:20px;
+
+font-style:italic;
+
+font-family:Georgia, serif;
+
+color:#D4AF37;
+
+letter-spacing:.5px;
+
+line-height:1.7;
+
+text-shadow:0 0 8px rgba(212,175,55,.20);
+
+}
+
