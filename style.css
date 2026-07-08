@@ -3014,6 +3014,68 @@ font-size:18px;
 
 }
 
+.logo{
+
+    opacity:0;
+
+    transform:translateY(15px);
+
+    animation:apparitionLogo .8s ease-out forwards;
+
+    animation-delay:.2s;
+
+}
+
+h1{
+
+    opacity:0;
+
+    animation:apparitionLogo .8s ease-out forwards;
+
+    animation-delay:.8s;
+
+}
+
+.slogan{
+
+    opacity:0;
+
+    animation:apparitionLogo .8s ease-out forwards;
+
+    animation-delay:1.3s;
+
+}
+
+.btn-hero{
+
+    opacity:0;
+
+    animation:apparitionLogo .8s ease-out forwards;
+
+    animation-delay:1.8s;
+
+}
+
+@keyframes apparitionLogo{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
 
 
 
