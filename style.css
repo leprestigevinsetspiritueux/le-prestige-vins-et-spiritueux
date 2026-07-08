@@ -2204,7 +2204,7 @@ nav{
 }
 
 /* =====================================
-   VINYLE MUSIQUE
+   VINYLE MUSICAL PREMIUM
 ===================================== */
 
 #vinyle-musique{
@@ -2215,25 +2215,32 @@ left:20px;
 
 bottom:25px;
 
-width:65px;
+width:70px;
 
-height:65px;
+height:70px;
 
 border-radius:50%;
-
-background:
-radial-gradient(circle,#d4af37 0 10px,#222 11px,#000 100%);
-
-border:3px solid #111;
 
 cursor:pointer;
 
 z-index:9999;
 
-box-shadow:
-0 0 15px rgba(0,0,0,.4);
+background:
+repeating-radial-gradient(
+circle,
+#111 0px,
+#111 2px,
+#000 3px,
+#000 5px
+);
 
-transition:.3s;
+border:3px solid #222;
+
+box-shadow:
+0 0 15px rgba(0,0,0,.5),
+0 0 8px rgba(212,175,55,.4);
+
+transition:transform .3s;
 
 }
 
@@ -2243,7 +2250,9 @@ transform:scale(1.08);
 
 }
 
-.centre-vinyle{
+#vinyle-musique::before{
+
+content:"";
 
 position:absolute;
 
@@ -2253,19 +2262,44 @@ left:50%;
 
 transform:translate(-50%,-50%);
 
-width:18px;
+width:22px;
 
-height:18px;
+height:22px;
 
-background:#d4af37;
+border-radius:50%;
+
+background:#D4AF37;
+
+box-shadow:0 0 8px rgba(212,175,55,.8);
+
+}
+
+#vinyle-musique::after{
+
+content:"";
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:6px;
+
+height:6px;
+
+background:#111;
 
 border-radius:50%;
 
 }
 
-#vinyle-musique{
-    animation: tourner 7s linear infinite;
-    animation-play-state: paused;
+.rotation{
+
+animation:tourner 6s linear infinite;
+
 }
 
 @keyframes tourner{
@@ -2283,13 +2317,3 @@ transform:rotate(360deg);
 }
 
 }
-
-
-
-    
-    
-    
-    
-    
-
-
