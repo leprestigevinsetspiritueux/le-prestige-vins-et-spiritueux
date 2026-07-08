@@ -2203,6 +2203,88 @@ nav{
 
 }
 
+/* =====================================
+   VINYLE MUSIQUE
+===================================== */
+
+#vinyle-musique{
+
+position:fixed;
+
+left:20px;
+
+bottom:25px;
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,#d4af37 0 10px,#222 11px,#000 100%);
+
+border:3px solid #111;
+
+cursor:pointer;
+
+z-index:9999;
+
+box-shadow:
+0 0 15px rgba(0,0,0,.4);
+
+transition:.3s;
+
+}
+
+#vinyle-musique:hover{
+
+transform:scale(1.08);
+
+}
+
+.centre-vinyle{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:18px;
+
+height:18px;
+
+background:#d4af37;
+
+border-radius:50%;
+
+}
+
+.rotation{
+
+animation:tourner 7s linear infinite;
+
+}
+
+@keyframes tourner{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
 
 
     
