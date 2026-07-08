@@ -2340,15 +2340,37 @@ transform:rotate(360deg);
 
 }
 
-/* =====================================
-   CITATIONS
-===================================== */
+/*=====================================
+CITATIONS
+=====================================*/
+
+.citation-container{
+
+position:relative;
+
+min-height:120px;
+
+max-width:850px;
+
+margin:35px auto;
+
+padding:0 20px;
+
+}
 
 .citation-vin{
 
-margin-top:35px;
+position:absolute;
 
-text-align:center;
+top:0;
+
+left:0;
+
+width:100%;
+
+opacity:0;
+
+transition:opacity .8s ease-in-out;
 
 font-size:20px;
 
@@ -2358,21 +2380,33 @@ font-weight:500;
 
 color:#D4AF37;
 
-max-width:850px;
-
-margin-left:auto;
-
-margin-right:auto;
-
-padding:0 20px;
-
 line-height:1.7;
+
+text-align:center;
+
+text-shadow:0 0 8px rgba(212,175,55,.25);
+
+will-change:opacity;
+
+transform:translateZ(0);
+
+-webkit-transform:translateZ(0);
+
+}
+
+.citation-vin.active{
 
 opacity:1;
 
-transition:opacity .6s ease-in-out;
+}
 
-text-shadow:0 0 8px rgba(212,175,55,.25);
+@media(max-width:768px){
+
+.citation-container{
+
+min-height:150px;
+
+}
 
 }
 
