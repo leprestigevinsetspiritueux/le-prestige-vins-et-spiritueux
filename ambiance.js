@@ -4,6 +4,8 @@
 
 const musique = document.getElementById("musique-ambiance");
 
+const vinyle = document.getElementById("vinyle-musique");
+
 const popup = document.getElementById("popup-musique");
 
 const boutonOui = document.getElementById("activer-musique");
