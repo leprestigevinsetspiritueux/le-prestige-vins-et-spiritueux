@@ -691,6 +691,8 @@ document
 
 function retourHaut(){
 
+    afficherMessageRetour();
+
     window.scrollTo({
 
         top:0,
@@ -1099,3 +1101,17 @@ window.addEventListener("load", function(){
     },1900);
 
 });
+
+function afficherMessageRetour(){
+
+    const message = document.getElementById("message-retour");
+
+    message.classList.add("visible");
+
+    setTimeout(function(){
+
+        message.classList.remove("visible");
+
+    },1200);
+
+}
