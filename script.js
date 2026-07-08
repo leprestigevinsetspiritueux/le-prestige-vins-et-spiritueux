@@ -1069,3 +1069,33 @@ window.addEventListener("load", function () {
     }, 1800);
 
 });
+
+//=====================================
+// PREMIÈRE VISITE
+//=====================================
+
+window.addEventListener("load", function(){
+
+    if(localStorage.getItem("premiere-visite")){
+
+        return;
+
+    }
+
+    setTimeout(function(){
+
+        const bienvenue = document.getElementById("bienvenue-maison");
+
+        bienvenue.classList.add("visible");
+
+        setTimeout(function(){
+
+            bienvenue.classList.remove("visible");
+
+            localStorage.setItem("premiere-visite","oui");
+
+        },3000);
+
+    },1900);
+
+});
