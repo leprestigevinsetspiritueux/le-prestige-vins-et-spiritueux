@@ -942,7 +942,7 @@ if(boutonGarder){
 }
 
 // =====================================
-// CITATIONS
+// CITATIONS ANIMÉES
 // =====================================
 
 const citations = [
@@ -971,27 +971,42 @@ const citation = document.getElementById("citation-vin");
 
 let indexCitation = 0;
 
-setInterval(function(){
+function ecrireCitation(){
 
-    citation.style.opacity = 0;
+    citation.innerHTML="";
 
-    setTimeout(function(){
+    let texte = citations[indexCitation];
 
-        indexCitation++;
+    let i = 0;
 
-        if(indexCitation >= citations.length){
+    const machine = setInterval(function(){
 
-            indexCitation = 0;
+        citation.innerHTML += texte.charAt(i);
+
+        i++;
+
+        if(i >= texte.length){
+
+            clearInterval(machine);
+
+            setTimeout(function(){
+
+                indexCitation++;
+
+                if(indexCitation >= citations.length){
+
+                    indexCitation = 0;
+
+                }
+
+                ecrireCitation();
+
+            },3500);
 
         }
 
-        citation.innerHTML = citations[indexCitation];
+    },40);
 
-        citation.style.opacity = 1;
+}
 
-    },800);
-
-},6000);
-
-
-
+ecrireCitation();
