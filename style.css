@@ -2389,6 +2389,10 @@ user-select:none;
 
 }
 
+/* =====================================
+   INFOBULLE VINYLE
+===================================== */
+
 #tooltip-musique{
 
 position:fixed;
@@ -2399,19 +2403,17 @@ bottom:42px;
 
 padding:8px 14px;
 
-background:rgba(15,15,15,.96);
+background:rgba(20,20,20,.96);
 
 color:#D4AF37;
 
 border:1px solid rgba(212,175,55,.45);
 
-border-radius:25px;
+border-radius:20px;
 
 font-size:13px;
 
-font-weight:500;
-
-font-family:Georgia, serif;
+font-family:Georgia,serif;
 
 white-space:nowrap;
 
@@ -2425,7 +2427,7 @@ pointer-events:none;
 
 z-index:99999;
 
-box-shadow:0 8px 20px rgba(0,0,0,.35);
+box-shadow:0 8px 18px rgba(0,0,0,.35);
 
 }
 
