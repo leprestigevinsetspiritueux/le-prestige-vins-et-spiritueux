@@ -2370,7 +2370,7 @@ line-height:1.7;
 
 opacity:1;
 
-transition:opacity .8s ease;
+transition:opacity .6s ease-in-out;
 
 text-shadow:0 0 8px rgba(212,175,55,.25);
 
