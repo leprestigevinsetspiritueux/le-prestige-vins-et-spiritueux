@@ -1021,10 +1021,9 @@ window.addEventListener("load", function(){
 
     setTimeout(function(){
 
-        document
-            .getElementById("ecran-ouverture")
-            .classList.add("cache");
+    document
+        .getElementById("ecran-ouverture")
+        .classList.add("cache");
 
-    },900);
-
-});
+},1800);
+    
