@@ -2733,5 +2733,96 @@ opacity:1;
 
 }
 
+/*=====================================
+BIENVENUE PREMIÈRE VISITE
+=====================================*/
+
+#bienvenue-maison{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:rgba(18,0,8,.82);
+
+backdrop-filter:blur(3px);
+
+z-index:9999998;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:opacity .8s ease;
+
+}
+
+#bienvenue-maison.visible{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+.carte-bienvenue{
+
+text-align:center;
+
+color:#D4AF37;
+
+padding:40px;
+
+}
+
+.carte-bienvenue h2{
+
+margin:0;
+
+font-size:22px;
+
+font-weight:400;
+
+}
+
+.carte-bienvenue h1{
+
+margin:12px 0;
+
+font-size:42px;
+
+letter-spacing:4px;
+
+}
+
+.carte-bienvenue p{
+
+margin:0;
+
+font-size:18px;
+
+color:white;
+
+letter-spacing:2px;
+
+}
+
+.texte-bienvenue{
+
+margin-top:35px;
+
+font-size:20px;
+
+font-style:italic;
+
+}
+
+
 
 
