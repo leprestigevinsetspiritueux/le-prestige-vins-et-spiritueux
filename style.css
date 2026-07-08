@@ -2626,3 +2626,30 @@ text-shadow:0 0 8px rgba(212,175,55,.20);
 
 }
 
+/*=====================================
+AMBIANCE DE LA MAISON
+=====================================*/
+
+body.ambiance-soiree{
+
+background:#140006;
+
+transition:background 1.5s ease;
+
+}
+
+body.ambiance-soiree header{
+
+background:rgba(20,0,6,.96);
+
+}
+
+body.ambiance-soiree .citation-vin{
+
+color:#e6c76a;
+
+text-shadow:0 0 14px rgba(212,175,55,.35);
+
+}
+
+
