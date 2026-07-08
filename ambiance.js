@@ -15,7 +15,6 @@ const boutonNon = document.getElementById("refuser-musique");
 // Activation
 boutonOui.addEventListener("click",function(){
 
-    
 popup.style.display="none";
 
     musique.volume=0;
@@ -48,5 +47,29 @@ popup.style.display="none";
 boutonNon.addEventListener("click",function(){
 
 popup.style.display="none";
+
+});
+
+// =====================================
+// VINYLE MUSICAL
+// =====================================
+
+vinyle.addEventListener("click", function () {
+
+    if (musique.paused) {
+
+        musique.play();
+
+        musique.volume = 0.15;
+
+        vinyle.classList.add("rotation");
+
+    } else {
+
+        musique.pause();
+
+        vinyle.classList.remove("rotation");
+
+    }
 
 });
