@@ -1702,6 +1702,12 @@ transition:all .3s ease;
     align-items:center;
 }
 
+        #accueil{
+
+        padding-top:30px;
+
+    }
+
 }
 
 #panier-lateral .carte{
