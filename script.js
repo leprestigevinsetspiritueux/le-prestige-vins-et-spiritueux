@@ -1013,25 +1013,25 @@ const citation = document.getElementById("citation-vin");
 
 let indexCitation = 0;
 
-function ecrireCitation(){
+function afficherCitation(){
 
-    citation.innerHTML="";
+    citation.style.opacity = "0";
 
-    let texte = citations[indexCitation];
+    setTimeout(function(){
 
-    let i = 0;
+        citation.innerHTML = "✦";
 
-    const machine = setInterval(function(){
+        citation.style.opacity = "1";
 
-        citation.innerHTML += texte.charAt(i);
+        setTimeout(function(){
 
-        i++;
-
-        if(i >= texte.length){
-
-            clearInterval(machine);
+            citation.style.opacity = "0";
 
             setTimeout(function(){
+
+                citation.innerHTML = citations[indexCitation];
+
+                citation.style.opacity = "1";
 
                 indexCitation++;
 
@@ -1041,18 +1041,17 @@ function ecrireCitation(){
 
                 }
 
-                ecrireCitation();
+            },300);
 
-            },3500);
+        },300);
 
-        }
-
-    },40);
+    },600);
 
 }
 
-ecrireCitation();
+afficherCitation();
 
+setInterval(afficherCitation,7000);
 //=====================================
 // OUVERTURE DE LA CAVE
 //=====================================
