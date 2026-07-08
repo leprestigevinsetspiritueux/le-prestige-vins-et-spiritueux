@@ -88,7 +88,7 @@ function ajouterPanier(nom, prix){
 
     afficherPanier();
 
-    afficherNotification(nom);
+    afficherNotification(produit.nom);
 
 }
 
@@ -251,10 +251,10 @@ function afficherNotification(nomProduit){
         return;
     }
 
-   notification.innerHTML = `
-    <strong>${product.name}</strong><br>
-    🍷 Cette bouteille rejoint désormais votre cave.
-`;
+    notification.innerHTML = `
+        <strong>${nomProduit}</strong><br>
+        🍷 Cette bouteille rejoint désormais votre cave.
+    `;
 
     notification.classList.add("active");
 
@@ -262,7 +262,7 @@ function afficherNotification(nomProduit){
 
         notification.classList.remove("active");
 
-   },2200);
+    },2200);
 }
 
 //====================================================
