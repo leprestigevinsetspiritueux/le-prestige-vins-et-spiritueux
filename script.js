@@ -251,8 +251,10 @@ function afficherNotification(nomProduit){
         return;
     }
 
-    notification.innerHTML =
-        "✅ <strong>" + nomProduit + "</strong><br>ajouté au panier";
+   notification.innerHTML = `
+    <strong>${product.name}</strong><br>
+    🍷 Cette bouteille rejoint désormais votre cave.
+`;
 
     notification.classList.add("active");
 
