@@ -3096,6 +3096,28 @@ h1{
 
 }
 
+/*=====================================
+ANIMATION D'ENTRÉE
+=====================================*/
+
+.apparition{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+.apparition.visible{
+
+opacity:1;
+
+transform:translateY(0);
+
+transition:all .8s ease;
+
+}
+
 
 
 
