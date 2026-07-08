@@ -10,12 +10,6 @@ const boutonOui = document.getElementById("activer-musique");
 
 const boutonNon = document.getElementById("refuser-musique");
 
-else if(choix==="non"){
-
-    popup.style.display="none";
-
-}
-
 // Activation
 boutonOui.addEventListener("click",function(){
 
