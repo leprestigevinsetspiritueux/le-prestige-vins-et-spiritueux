@@ -2360,13 +2360,23 @@ padding:0 20px;
 
 .citation-vin{
 
+.citation-vin{
+
 position:absolute;
 
 top:0;
 
 left:0;
 
+right:0;
+
 width:100%;
+
+box-sizing:border-box;
+
+padding:0 20px;
+
+}
 
 opacity:0;
 
