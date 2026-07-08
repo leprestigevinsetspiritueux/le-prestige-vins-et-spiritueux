@@ -17,6 +17,8 @@ boutonOui.addEventListener("click",function(){
 
 popup.style.display="none";
 
+vinyle.classList.remove("rotation");
+
     musique.volume=0;
 
     musique.play().catch(()=>{});
