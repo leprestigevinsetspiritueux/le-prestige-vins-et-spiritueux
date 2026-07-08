@@ -2107,6 +2107,102 @@ nav{
 
 }
 
+/* =====================================
+   POPUP MUSIQUE
+===================================== */
+
+.popup-musique{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.80);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+}
+
+.popup-musique-box{
+
+    width:90%;
+
+    max-width:430px;
+
+    background:#2b0010;
+
+    border:2px solid #D4AF37;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+
+}
+
+.popup-musique-box h2{
+
+    color:#D4AF37;
+
+    margin-bottom:20px;
+
+}
+
+.popup-musique-actions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.popup-musique-actions button{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+#activer-musique{
+
+    background:#25D366;
+
+    color:white;
+
+}
+
+#refuser-musique{
+
+    background:#6D071A;
+
+    color:white;
+
+}
+
 
 
     
