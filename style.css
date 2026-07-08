@@ -2652,4 +2652,45 @@ text-shadow:0 0 14px rgba(212,175,55,.35);
 
 }
 
+body.ambiance-soiree::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+background:
+radial-gradient(circle at 20% 15%,
+rgba(255,210,120,.05),
+transparent 35%),
+
+radial-gradient(circle at 80% 18%,
+rgba(255,210,120,.04),
+transparent 40%);
+
+z-index:1;
+
+animation:lueurBougie 6s ease-in-out infinite alternate;
+
+}
+
+@keyframes lueurBougie{
+
+from{
+
+opacity:.75;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
 
