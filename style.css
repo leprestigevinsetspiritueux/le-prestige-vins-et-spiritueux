@@ -2823,6 +2823,68 @@ font-style:italic;
 
 }
 
+/*=====================================
+SÉPARATEUR LP
+=====================================*/
+
+.separateur-maison{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin:70px auto;
+
+max-width:500px;
+
+}
+
+.separateur-maison::before,
+.separateur-maison::after{
+
+content:"";
+
+flex:1;
+
+height:1px;
+
+background:linear-gradient(
+to right,
+transparent,
+rgba(212,175,55,.35),
+transparent
+);
+
+}
+
+.separateur-maison span{
+
+margin:0 18px;
+
+padding:4px 10px;
+
+border:1px solid rgba(212,175,55,.35);
+
+border-radius:20px;
+
+color:#D4AF37;
+
+font-family:Georgia, serif;
+
+font-size:14px;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+background:rgba(20,20,20,.35);
+
+box-shadow:0 0 10px rgba(212,175,55,.12);
+
+}
+
 
 
 
