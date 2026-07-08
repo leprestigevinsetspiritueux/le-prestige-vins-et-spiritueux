@@ -12,6 +12,9 @@ const boutonOui = document.getElementById("activer-musique");
 
 const boutonNon = document.getElementById("refuser-musique");
 
+const titrePopup = document.getElementById("titre-popup-musique");
+const textePopup = document.getElementById("texte-popup-musique");
+
 //=====================================
 // MÉMOIRE DE L'AMBIANCE
 //=====================================
