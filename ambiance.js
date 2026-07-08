@@ -93,4 +93,14 @@ document.addEventListener("visibilitychange", function () {
 
 });
 
+    //=====================================
+// AMBIANCE SOIRÉE
+//=====================================
+
+const heure = new Date().getHours();
+
+if (heure >= 20 || heure < 6) {
+    document.body.classList.add("ambiance-soiree");
+}
+
 });
