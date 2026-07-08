@@ -26,6 +26,22 @@ const maintenant = Date.now();
 
 const delai = 12 * 60 * 60 * 1000; // 12 heures
 
+if(derniereVisite){
+
+    titrePopup.innerHTML = "Heureux de vous retrouver";
+
+    textePopup.innerHTML =
+    "Souhaitez-vous profiter à nouveau de l'ambiance de la Maison ?";
+
+}else{
+
+    titrePopup.innerHTML = "Bienvenue dans notre Maison";
+
+    textePopup.innerHTML =
+    "La Maison vous propose de découvrir son ambiance musicale.";
+
+}
+
 if(derniereVisite && (maintenant - Number(derniereVisite)) < delai){
 
     if(ambianceActive === "oui"){
@@ -63,6 +79,7 @@ if(derniereVisite && (maintenant - Number(derniereVisite)) < delai){
     }
 
 }
+
 // Activation
 
 boutonOui.addEventListener("click",function(){
