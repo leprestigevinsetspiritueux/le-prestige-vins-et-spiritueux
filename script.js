@@ -1025,5 +1025,5 @@ window.addEventListener("load", function(){
         .getElementById("ecran-ouverture")
         .classList.add("cache");
 
-},2000);
+},1800);
     
