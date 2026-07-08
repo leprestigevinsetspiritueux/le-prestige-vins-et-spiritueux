@@ -17,13 +17,12 @@ boutonOui.addEventListener("click",function(){
 
 popup.style.display="none";
 
-vinyle.classList.remove("rotation");
-
+vinyle.style.animationPlayState = "paused";
     musique.volume=0;
 
     musique.play().catch(()=>{});
 
-    vinyle.classList.add("rotation");
+    vinyle.style.animationPlayState = "running";
 
     let volume=0;
 
