@@ -10,19 +10,6 @@ const boutonOui = document.getElementById("activer-musique");
 
 const boutonNon = document.getElementById("refuser-musique");
 
-// Si le visiteur a déjà choisi
-const choix = localStorage.getItem("ambiance");
-
-if(choix==="oui"){
-
-    popup.style.display="none";
-
-    musique.volume=0.15;
-
-    musique.play().catch(()=>{});
-
-}
-
 else if(choix==="non"){
 
     popup.style.display="none";
@@ -32,9 +19,8 @@ else if(choix==="non"){
 // Activation
 boutonOui.addEventListener("click",function(){
 
-    localStorage.setItem("ambiance","oui");
-
-    popup.style.display="none";
+    
+popup.style.display="none";
 
     musique.volume=0;
 
@@ -63,8 +49,6 @@ boutonOui.addEventListener("click",function(){
 // Refus
 boutonNon.addEventListener("click",function(){
 
-    localStorage.setItem("ambiance","non");
-
-    popup.style.display="none";
+popup.style.display="none";
 
 });
