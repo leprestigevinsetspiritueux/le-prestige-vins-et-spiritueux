@@ -472,6 +472,46 @@ document.addEventListener("click",function(e){
 
 function filtrerCategorie(categorie){
 
+afficherMessageCategorie(categorie);
+
+function afficherMessageCategorie(categorie){
+
+    const zone = document.getElementById("message-categorie");
+
+    if(!zone) return;
+
+    const messages = {
+
+        "tous":"✦ Découvrez l'ensemble de notre cave.",
+
+        "whisky":"✦ La Maison vous ouvre sa cave des Whiskies.",
+
+        "rouge":"✦ Les plus beaux terroirs rouges vous accueillent.",
+
+        "blanc-sec":"✦ La fraîcheur et l'élégance de notre cave.",
+
+        "blanc-moelleux":"✦ Une sélection aux notes délicatement gourmandes.",
+
+        "rose":"✦ L'esprit de l'été dans notre cave.",
+
+        "champagne":"✦ La Maison vous ouvre sa cave des Champagnes.",
+
+        "sans-alcool":"✦ Le plaisir de la dégustation sans compromis."
+
+    };
+
+    zone.innerHTML = messages[categorie] || "";
+
+    zone.classList.add("visible");
+
+    setTimeout(function(){
+
+        zone.classList.remove("visible");
+
+    },1800);
+
+}
+
     const cartes =
         document.querySelectorAll("#catalogue .carte");
 
