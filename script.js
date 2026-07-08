@@ -496,7 +496,9 @@ function afficherMessageCategorie(categorie){
 
         "champagne":"✦ La Maison vous ouvre sa cave des Champagnes.",
 
-        "sans-alcool":"✦ Le plaisir de la dégustation sans compromis."
+        "sans-alcool":"✦ Le plaisir de la dégustation sans compromis.",
+
+        "coffrets-cadeaux":"✦ La Maison vous ouvre son écrin de cadeaux.",
 
     };
 
