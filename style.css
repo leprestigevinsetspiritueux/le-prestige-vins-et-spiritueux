@@ -40,13 +40,13 @@ body{
 
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
     text-align:center;
 
     padding:20px;
 
-    padding-top:30px;
+    padding-top:120px;
 }
 
 .logo{
@@ -93,7 +93,7 @@ h1{
     justify-content: center;
     align-items: center;
     gap: 25px;
-    padding: 12px 20px;
+    padding:6px 25px;
     background: rgba(0,0,0,.92);
     backdrop-filter: blur(8px);
     z-index: 9999;
