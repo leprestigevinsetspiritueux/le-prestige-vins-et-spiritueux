@@ -73,4 +73,24 @@ vinyle.addEventListener("click", function () {
 
     }
 
+    // =====================================
+// PAUSE AUTOMATIQUE SI L'ONGLET EST QUITTÉ
+// =====================================
+
+document.addEventListener("visibilitychange", function () {
+
+    if (document.hidden) {
+
+        musique.pause();
+        vinyle.style.animationPlayState = "paused";
+
+    } else {
+
+        musique.play().catch(() => {});
+        vinyle.style.animationPlayState = "running";
+
+    }
+
+});
+
 });
