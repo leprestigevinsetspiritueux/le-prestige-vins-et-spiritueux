@@ -498,7 +498,7 @@ function afficherMessageCategorie(categorie){
 
         "sans-alcool":"✦ Le plaisir de la dégustation sans compromis.",
 
-        "coffrets-cadeaux":"✦ La Maison vous ouvre son écrin de cadeaux.",
+       "coffret":"✦ La Maison vous ouvre son écrin de cadeaux.",
 
     };
 
