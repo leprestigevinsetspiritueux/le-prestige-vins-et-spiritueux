@@ -1012,3 +1012,19 @@ function ecrireCitation(){
 }
 
 ecrireCitation();
+
+//=====================================
+// OUVERTURE DE LA CAVE
+//=====================================
+
+window.addEventListener("load", function(){
+
+    setTimeout(function(){
+
+        document
+            .getElementById("ecran-ouverture")
+            .classList.add("cache");
+
+    },900);
+
+});
