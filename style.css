@@ -919,17 +919,21 @@ footer p{
 
     }
 
-    #accueil{
+   #accueil{
 
         min-height:85vh;
 
         padding:20px;
 
+        padding-top:170px;
+
     }
 
     .logo{
 
-        width:90px;
+        width:120px;
+
+        margin-bottom:20px;
 
     }
 
