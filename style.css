@@ -2252,7 +2252,7 @@ transform:scale(1.08);
 
 #vinyle-musique::before{
 
-content:"♫\A LE PRESTIGE";
+content:"♫\A LP";
 
 white-space:pre;
 
@@ -2270,8 +2270,6 @@ height:22px;
 
 border-radius:50%;
 
-background:#D4AF37;
-
 display:flex;
 
 justify-content:center;
@@ -2280,20 +2278,35 @@ align-items:center;
 
 flex-direction:column;
 
-font-size:6px;
+font-family:Georgia, serif;
 
-font-weight:bold;
+font-size:7px;
 
-color:#111;
+font-weight:700;
 
-line-height:1.1;
-
-box-shadow:0 0 8px rgba(212,175,55,.8);
+line-height:1;
 
 text-align:center;
 
-}
+color:#1b1b1b;
 
+background:linear-gradient(
+145deg,
+#f8e7a1 0%,
+#e4c76b 25%,
+#c79a2d 50%,
+#f3d97a 75%,
+#fff2b8 100%
+);
+
+border:1px solid rgba(255,255,255,.25);
+
+box-shadow:
+inset 0 1px 2px rgba(255,255,255,.6),
+inset 0 -1px 2px rgba(0,0,0,.35),
+0 0 8px rgba(212,175,55,.6);
+
+}
 .rotation{
 
 animation:tourner 6s linear infinite;
@@ -2373,5 +2386,53 @@ pointer-events:none;
 z-index:10;
 
 user-select:none;
+
+}
+
+#tooltip-musique{
+
+position:fixed;
+
+left:90px;
+
+bottom:42px;
+
+padding:8px 14px;
+
+background:rgba(15,15,15,.96);
+
+color:#D4AF37;
+
+border:1px solid rgba(212,175,55,.45);
+
+border-radius:25px;
+
+font-size:13px;
+
+font-weight:500;
+
+font-family:Georgia, serif;
+
+white-space:nowrap;
+
+opacity:0;
+
+transform:translateX(-10px);
+
+transition:all .35s ease;
+
+pointer-events:none;
+
+z-index:99999;
+
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+
+}
+
+#vinyle-musique:hover + #tooltip-musique{
+
+opacity:1;
+
+transform:translateX(0);
 
 }
