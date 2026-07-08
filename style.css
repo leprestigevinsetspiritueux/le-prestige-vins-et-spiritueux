@@ -2215,9 +2215,9 @@ left:20px;
 
 bottom:25px;
 
-width:70px;
+width:60px;
 
-height:70px;
+height:60px;
 
 border-radius:50%;
 
@@ -2262,9 +2262,9 @@ left:50%;
 
 transform:translate(-50%,-50%);
 
-width:22px;
+width:20px;
 
-height:22px;
+height:20px;
 
 border-radius:50%;
 
@@ -2351,5 +2351,29 @@ opacity:1;
 transition:opacity .8s ease;
 
 text-shadow:0 0 8px rgba(212,175,55,.25);
+
+}
+
+#vinyle-musique span{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:11px;
+
+font-weight:bold;
+
+color:#111;
+
+pointer-events:none;
+
+z-index:10;
+
+user-select:none;
 
 }
