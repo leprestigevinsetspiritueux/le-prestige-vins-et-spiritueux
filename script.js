@@ -1017,13 +1017,14 @@ ecrireCitation();
 // OUVERTURE DE LA CAVE
 //=====================================
 
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
 
-    setTimeout(function(){
+    setTimeout(function () {
 
-    document
-        .getElementById("ecran-ouverture")
-        .classList.add("cache");
+        document
+            .getElementById("ecran-ouverture")
+            .classList.add("cache");
 
-},1800);
-    
+    }, 1800);
+
+});
