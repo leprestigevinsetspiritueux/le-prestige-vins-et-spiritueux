@@ -2263,10 +2263,9 @@ border-radius:50%;
 
 }
 
-.rotation{
-
-animation:tourner 7s linear infinite;
-
+#vinyle-musique{
+    animation: tourner 7s linear infinite;
+    animation-play-state: paused;
 }
 
 @keyframes tourner{
