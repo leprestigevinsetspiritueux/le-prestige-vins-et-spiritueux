@@ -1013,49 +1013,42 @@ const citations = [
 
 ];
 
-const citation = document.getElementById("citation-vin");
+const citation1 = document.getElementById("citation1");
+const citation2 = document.getElementById("citation2");
+
+let activeCitation = citation1;
+let inactiveCitation = citation2;
 
 let indexCitation = 0;
 
 function afficherCitation(){
 
-    citation.style.opacity = "0";
+    inactiveCitation.innerHTML = citations[indexCitation];
 
-    setTimeout(function(){
+    inactiveCitation.classList.add("active");
 
-        citation.innerHTML = "✦";
+    activeCitation.classList.remove("active");
 
-        citation.style.opacity = "1";
+    const temp = activeCitation;
 
-        setTimeout(function(){
+    activeCitation = inactiveCitation;
 
-            citation.style.opacity = "0";
+    inactiveCitation = temp;
 
-            setTimeout(function(){
+    indexCitation++;
 
-                citation.innerHTML = citations[indexCitation];
+    if(indexCitation >= citations.length){
 
-                citation.style.opacity = "1";
+        indexCitation = 0;
 
-                indexCitation++;
-
-                if(indexCitation >= citations.length){
-
-                    indexCitation = 0;
-
-                }
-
-            },300);
-
-        },300);
-
-    },600);
+    }
 
 }
 
 afficherCitation();
 
-setInterval(afficherCitation,7000);
+setInterval(afficherCitation,6000);
+
 //=====================================
 // OUVERTURE DE LA CAVE
 //=====================================
