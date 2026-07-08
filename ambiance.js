@@ -22,6 +22,8 @@ popup.style.display="none";
 
     musique.play().catch(()=>{});
 
+    vinyle.classList.add("rotation");
+
     let volume=0;
 
     const fondu=setInterval(function(){
