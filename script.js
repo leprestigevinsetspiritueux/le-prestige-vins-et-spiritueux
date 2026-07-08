@@ -941,4 +941,57 @@ if(boutonGarder){
 
 }
 
+// =====================================
+// CITATIONS
+// =====================================
+
+const citations = [
+
+"🍷 « Chaque bouteille raconte une histoire. »",
+
+"🥂 « Les grands moments méritent les grandes bouteilles. »",
+
+"🍇 « Le prestige commence par le choix. »",
+
+"✨ « L'élégance se savoure autant qu'elle se voit. »",
+
+"🥃 « Un grand spiritueux révèle son caractère. »",
+
+"🚚 Livraison rapide à Cotonou et partout au Bénin.",
+
+"💳 Paiement sécurisé par Mobile Money.",
+
+"🎁 Des vins et spiritueux soigneusement sélectionnés.",
+
+"🍾 Offrez plus qu'une bouteille, offrez une émotion."
+
+];
+
+const citation = document.getElementById("citation-vin");
+
+let indexCitation = 0;
+
+setInterval(function(){
+
+    citation.style.opacity = 0;
+
+    setTimeout(function(){
+
+        indexCitation++;
+
+        if(indexCitation >= citations.length){
+
+            indexCitation = 0;
+
+        }
+
+        citation.innerHTML = citations[indexCitation];
+
+        citation.style.opacity = 1;
+
+    },800);
+
+},6000);
+
+
 
