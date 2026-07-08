@@ -3076,6 +3076,27 @@ h1{
 
 }
 
+.texte-caviste{
+
+    max-width:650px;
+
+    margin:0 auto 35px;
+
+    text-align:center;
+
+    color:#D4AF37;
+
+    font-size:18px;
+
+    font-style:italic;
+
+    font-family:Georgia, serif;
+
+    line-height:1.7;
+
+}
+
+
 
 
 
