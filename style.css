@@ -3289,7 +3289,7 @@ GOOGLE AVIS PREMIUM
 
 #avis-google{
 
-    padding:90px 20px;
+    padding:40px 20px;
 
     background:
     radial-gradient(circle at top,
@@ -3301,9 +3301,9 @@ GOOGLE AVIS PREMIUM
 
 .avis-conteneur{
 
-    max-width:700px;
+    max-width:520px;
 
-    margin: 40px auto;
+    margin:auto;
 
     text-align:center;
 
@@ -3313,7 +3313,7 @@ GOOGLE AVIS PREMIUM
 
     border-radius: 18px;
     
-    padding: 30px;
+    padding: 20px;
     
     box-shadow:
     0 0 35px rgba(212,175,55,.18);
@@ -3354,25 +3354,19 @@ GOOGLE AVIS PREMIUM
 
 .cadre-qr{
 
-    width: 180px;
-    
-    margin: 20px auto;
-    
-    max-width: 100%;
+    width:220px;
 
-    display: block;
+    margin:25px auto;
 
-    padding:18px;
+    padding:12px;
 
-    background:white;
+    background:#fff;
 
-    border:4px solid #D4AF37;
+    border:3px solid #D4AF37;
 
-    border-radius:22px;
+    border-radius:18px;
 
-    box-shadow:0 0 25px rgba(212,175,55,.45);
-
-    animation:respiration 3s ease-in-out infinite;
+    box-shadow:0 0 15px rgba(212,175,55,.30);
 
 }
 
@@ -3385,7 +3379,6 @@ GOOGLE AVIS PREMIUM
     border-radius:10px;
 
 }
-
 .scan{
 
     color:#D4AF37;
