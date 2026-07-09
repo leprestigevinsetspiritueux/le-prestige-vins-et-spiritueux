@@ -3601,5 +3601,54 @@ nav a{
 
 }
 
+/*======================================
+ CROIX DU PANIER - MOBILE
+======================================*/
+@media (max-width:768px){
+
+    .fermer-panier{
+
+        position:fixed !important;
+
+        top:95px !important;
+
+        right:15px !important;
+
+        width:48px;
+
+        height:48px;
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        border:none;
+
+        border-radius:50%;
+
+        background:#C62828;
+
+        color:#fff;
+
+        font-size:30px;
+
+        font-weight:bold;
+
+        box-shadow:0 6px 18px rgba(0,0,0,.35);
+
+        z-index:9999999;
+
+    }
+
+    #panier-lateral{
+
+        padding-top:140px !important;
+
+    }
+
+}
+
 
 
