@@ -3676,3 +3676,40 @@ nav a{
     z-index:100;
 
 }
+
+.entete-panier{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.entete-panier h2{
+
+    margin:0;
+    color:#D4AF37;
+    font-size:38px;
+}
+
+.fermer-panier{
+
+    width:52px;
+    height:52px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#C89B0E;
+    color:#fff;
+
+    font-size:34px;
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.35);
+}
