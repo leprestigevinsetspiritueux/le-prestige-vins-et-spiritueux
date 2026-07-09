@@ -3268,3 +3268,73 @@ CATALOGUE PREMIUM MOBILE
 
 }
 
+/*=====================================
+CARTES COMPACTES MOBILE
+=====================================*/
+
+@media (max-width:768px){
+
+    .produits{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        padding:0 8px;
+    }
+
+    .carte{
+        border-radius:16px;
+        overflow:hidden;
+        margin:0;
+    }
+
+    .carte img{
+        width:100%;
+        height:120px;
+        object-fit:cover;
+    }
+
+    .contenu{
+        padding:8px;
+    }
+
+    .carte h3{
+        font-size:14px;
+        line-height:1.25;
+        margin-bottom:6px;
+    }
+
+    .carte p{
+        font-size:11px;
+        line-height:1.3;
+        margin:4px 0;
+    }
+
+    .prix{
+        font-size:15px;
+        margin:8px 0;
+        color:#D4AF37;
+        font-weight:bold;
+    }
+
+    .actions{
+        padding:8px;
+        display:flex;
+        flex-direction:column;
+        gap:6px;
+    }
+
+    .actions button,
+    .btn-commander{
+        font-size:11px;
+        padding:8px;
+        border-radius:8px;
+    }
+
+    .badge{
+        font-size:9px;
+        padding:4px 8px;
+    }
+
+}
+
+
