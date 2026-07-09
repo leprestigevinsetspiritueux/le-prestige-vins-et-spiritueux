@@ -3299,3 +3299,25 @@ REFLET DORÉ
     opacity:.9;
 
 }
+
+/*=====================================
+LE CHOIX DU CAVISTE
+=====================================*/
+
+.choix-caviste{
+
+    margin-top:8px;
+
+    text-align:center;
+
+    color:#D4AF37;
+
+    font-size:13px;
+
+    font-style:italic;
+
+    letter-spacing:.5px;
+
+    opacity:.95;
+
+}
