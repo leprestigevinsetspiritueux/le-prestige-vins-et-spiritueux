@@ -3354,29 +3354,31 @@ GOOGLE AVIS PREMIUM
 
 .cadre-qr{
 
-    width:220px;
+    display:inline-block;
 
-    margin:25px auto;
+    margin:20px auto;
 
-    padding:12px;
+    padding:10px;
 
     background:#fff;
 
-    border:3px solid #D4AF37;
+    border:2px solid #D4AF37;
 
-    border-radius:18px;
+    border-radius:15px;
 
-    box-shadow:0 0 15px rgba(212,175,55,.30);
+    box-shadow:0 6px 18px rgba(0,0,0,.20);
 
 }
 
 .cadre-qr img{
 
-    width:100%;
+    width:170px;
+
+    height:auto;
 
     display:block;
 
-    border-radius:10px;
+    border-radius:8px;
 
 }
 .scan{
