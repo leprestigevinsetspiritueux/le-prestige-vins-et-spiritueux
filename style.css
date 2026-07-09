@@ -3638,3 +3638,32 @@ nav a{
     }
 
 }
+
+/*======================================
+ PANIER MOBILE
+======================================*/
+@media (max-width:768px){
+
+#panier-lateral,
+.panier-lateral{
+
+    top:175px !important;
+    height:calc(100vh - 175px) !important;
+
+}
+
+}
+
+@media (max-width:768px){
+
+#fermer-panier,
+.fermer-panier,
+.close-panier{
+
+    top:185px !important;
+    right:15px !important;
+    z-index:999999 !important;
+
+}
+
+}
