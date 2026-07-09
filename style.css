@@ -3600,43 +3600,32 @@ nav a{
     }
 
 }
+/* Croix du panier */
+#fermer-panier,
+.fermer-panier,
+.close-panier{
 
-/*======================================
- CROIX PANIER - CORRECTION MOBILE
-======================================*/
-@media (max-width:768px){
+    position:absolute !important;
+    top:15px !important;
+    right:15px !important;
 
-    .fermer-panier,
-    .close-panier,
-    .btn-fermer-panier,
-    #fermer-panier{
+    width:48px;
+    height:48px;
 
-        position:fixed !important;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-        top:135px !important;
+    background:#b8860b;
+    color:#fff;
 
-        right:18px !important;
+    border:3px solid #fff;
+    border-radius:50%;
 
-        width:46px !important;
-        height:46px !important;
+    font-size:34px;
+    font-weight:bold;
 
-        display:flex !important;
-        align-items:center !important;
-        justify-content:center !important;
-
-        background:#b8860b !important;
-        color:#fff !important;
-
-        border:2px solid #fff !important;
-        border-radius:50% !important;
-
-        font-size:30px !important;
-        font-weight:bold !important;
-
-        z-index:999999999 !important;
-        box-shadow:0 0 15px rgba(0,0,0,.45) !important;
-    }
-
+    z-index:99999;
 }
 
 /*======================================
@@ -3647,8 +3636,8 @@ nav a{
 #panier-lateral,
 .panier-lateral{
 
-    top:175px !important;
-    height:calc(100vh - 175px) !important;
+    top:110px !important;
+    height:calc(100vh - 110px) !important;
 
 }
 
