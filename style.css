@@ -1429,7 +1429,7 @@ transition:all .3s ease;
     overflow:hidden
     transition:.35s;
     z-index:9999;
-    padding:150px 20px 30px;
+    padding:20px;
     box-sizing:border-box;
 }
 
@@ -1459,24 +1459,25 @@ transition:all .3s ease;
 }
 
 .fermer-panier{
-    position:fixed;
-    top:95px;
-    right:20px;
 
-    width:46px;
-    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:42px;
+    height:42px;
 
     border:none;
     border-radius:50%;
 
-    background:#d40000;
-    color:#fff;
+    background:#D4AF37;
+    color:#111;
 
     font-size:28px;
+    font-weight:bold;
+
     cursor:pointer;
 
-    z-index:30000;
-    display:none;
 }
 
 #panier-lateral.ouvert .fermer-panier{
@@ -3654,5 +3655,24 @@ nav a{
         right:15px !important;
         z-index:999999;
     }
+
+}
+
+.titre-panier{
+
+    position:sticky;
+    top:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#3b0010;
+
+    padding:18px 20px;
+
+    border-bottom:2px solid #D4AF37;
+
+    z-index:100;
 
 }
