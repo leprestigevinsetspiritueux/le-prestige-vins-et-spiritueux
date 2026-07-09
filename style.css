@@ -1426,7 +1426,7 @@ transition:all .3s ease;
     flex-direction:column;
 
     background:#3b0010;
-    overflow:hidden;
+    overflow:visible;
     transition:.35s;
     z-index:9999;
     padding:150px 20px 30px;
@@ -3648,14 +3648,16 @@ nav a{
 
 @media (max-width:768px){
 
-#fermer-panier,
-.fermer-panier,
-.close-panier{
+    .fermer-panier{
 
-    top:185px !important;
-    right:15px !important;
-    z-index:999999 !important;
+        position: absolute !important;
 
-}
+        top:20px !important;
+
+        right:20px !important;
+
+        z-index:999999 !important;
+
+    }
 
 }
