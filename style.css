@@ -3301,9 +3301,9 @@ GOOGLE AVIS PREMIUM
 
 .avis-conteneur{
 
-    max-width:760px;
+    max-width:700px;
 
-    margin:auto;
+    margin: 40px auto;
 
     text-align:center;
 
@@ -3311,10 +3311,10 @@ GOOGLE AVIS PREMIUM
 
     border:2px solid rgba(212,175,55,.35);
 
-    border-radius:25px;
-
-    padding:55px 40px;
-
+    border-radius: 18px;
+    
+    padding: 30px;
+    
     box-shadow:
     0 0 35px rgba(212,175,55,.18);
 
@@ -3354,9 +3354,13 @@ GOOGLE AVIS PREMIUM
 
 .cadre-qr{
 
-    width:280px;
+    width: 180px;
+    
+    margin: 20px auto;
+    
+    max-width: 100%;
 
-    margin:45px auto;
+    display: block;
 
     padding:18px;
 
