@@ -3602,53 +3602,39 @@ nav a{
 }
 
 /*======================================
- CROIX DU PANIER - MOBILE
+ CROIX PANIER - CORRECTION MOBILE
 ======================================*/
 @media (max-width:768px){
 
-    .fermer-panier{
+    .fermer-panier,
+    .close-panier,
+    .btn-fermer-panier,
+    #fermer-panier{
 
         position:fixed !important;
 
-        top:95px !important;
+        top:135px !important;
 
-        right:15px !important;
+        right:18px !important;
 
-        width:48px;
+        width:46px !important;
+        height:46px !important;
 
-        height:48px;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
 
-        display:flex;
+        background:#b8860b !important;
+        color:#fff !important;
 
-        justify-content:center;
+        border:2px solid #fff !important;
+        border-radius:50% !important;
 
-        align-items:center;
+        font-size:30px !important;
+        font-weight:bold !important;
 
-        border:none;
-
-        border-radius:50%;
-
-        background:#C62828;
-
-        color:#fff;
-
-        font-size:30px;
-
-        font-weight:bold;
-
-        box-shadow:0 6px 18px rgba(0,0,0,.35);
-
-        z-index:9999999;
-
-    }
-
-    #panier-lateral{
-
-        padding-top:140px !important;
-
+        z-index:999999999 !important;
+        box-shadow:0 0 15px rgba(0,0,0,.45) !important;
     }
 
 }
-
-
-
