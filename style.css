@@ -3095,16 +3095,3 @@ h1{
     line-height:1.7;
 
 }
-
-/*=====================================
-ANIMATION D'ENTRÉE
-=====================================*/
-
-.apparition{
-    opacity:0;
-}
-
-.apparition.visible{
-    opacity:1;
-    transition:opacity .8s ease;
-}
