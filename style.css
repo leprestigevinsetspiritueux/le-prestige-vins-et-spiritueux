@@ -1426,7 +1426,8 @@ transition:all .3s ease;
     flex-direction:column;
 
     background:#3b0010;
-    overflow:hidden
+    overflow-y:auto;
+    overflow-x:visible;
     transition:.35s;
     z-index:9999;
     padding:20px;
