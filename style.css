@@ -3606,26 +3606,29 @@ nav a{
 .close-panier{
 
     position:absolute !important;
-    top:15px !important;
-    right:15px !important;
 
-    width:48px;
-    height:48px;
+    top:-22px !important;
+    right:-12px !important;
+
+    width:60px;
+    height:60px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    background:#b8860b;
+    background:#c99a0a;
     color:#fff;
 
-    border:3px solid #fff;
+    border:4px solid #fff;
     border-radius:50%;
 
-    font-size:34px;
+    font-size:38px;
     font-weight:bold;
 
-    z-index:99999;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+
+    z-index:999999;
 }
 
 /*======================================
