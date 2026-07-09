@@ -64,15 +64,15 @@ if (dernierJour === aujourdHui) {
 
             volume += 0.01;
 
-            if (volume >= 0.15) {
+            if(volume >= 0.25){
 
-                volume = 0.15;
+    musique.volume = 0.25;
 
-                clearInterval(fondu);
+    clearInterval(fondu);
 
-            }
+}
 
-            musique.volume = volume;
+    musique.volume = volume;
 
         }, 120);
 
@@ -150,7 +150,7 @@ vinyle.addEventListener("click", function () {
 
         musique.play();
 
-        musique.volume = 0.15;
+       musique.volume = 0.25;
 
         vinyle.classList.add("rotation");
 
