@@ -3283,3 +3283,195 @@ LE CHOIX DU CAVISTE
 
 }
 
+/*=====================================
+GOOGLE AVIS PREMIUM
+=====================================*/
+
+#avis-google{
+
+    padding:90px 20px;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,175,55,.08),
+    transparent 45%),
+    #111;
+
+}
+
+.avis-conteneur{
+
+    max-width:760px;
+
+    margin:auto;
+
+    text-align:center;
+
+    background:#181818;
+
+    border:2px solid rgba(212,175,55,.35);
+
+    border-radius:25px;
+
+    padding:55px 40px;
+
+    box-shadow:
+    0 0 35px rgba(212,175,55,.18);
+
+}
+
+.etoiles-google{
+
+    color:#FFD700;
+
+    font-size:42px;
+
+    letter-spacing:8px;
+
+    margin-bottom:25px;
+
+}
+
+#avis-google h2{
+
+    color:#D4AF37;
+
+    font-size:34px;
+
+    margin-bottom:25px;
+
+}
+
+.texte-avis{
+
+    color:#fff;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.cadre-qr{
+
+    width:280px;
+
+    margin:45px auto;
+
+    padding:18px;
+
+    background:white;
+
+    border:4px solid #D4AF37;
+
+    border-radius:22px;
+
+    box-shadow:0 0 25px rgba(212,175,55,.45);
+
+    animation:respiration 3s ease-in-out infinite;
+
+}
+
+.cadre-qr img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:10px;
+
+}
+
+.scan{
+
+    color:#D4AF37;
+
+    font-size:18px;
+
+    margin-bottom:25px;
+
+}
+
+.btn-google{
+
+    display:inline-block;
+
+    background:#D4AF37;
+
+    color:#111;
+
+    padding:18px 45px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+}
+
+.btn-google:hover{
+
+    transform:translateY(-4px);
+
+    background:#F3CF6A;
+
+    box-shadow:0 0 20px #D4AF37;
+
+}
+
+.signature{
+
+    margin-top:45px;
+
+    color:#ddd;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.signature span{
+
+    color:#D4AF37;
+
+    font-style:italic;
+
+    font-size:22px;
+
+}
+
+@keyframes respiration{
+
+    0%{
+
+        transform:scale(1);
+
+        box-shadow:0 0 20px rgba(212,175,55,.25);
+
+    }
+
+    50%{
+
+        transform:scale(1.03);
+
+        box-shadow:0 0 35px rgba(212,175,55,.55);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        box-shadow:0 0 20px rgba(212,175,55,.25);
+
+    }
+
+}
+
+
