@@ -3,13 +3,11 @@
 // =====================================
 
 const musique = document.getElementById("musique-ambiance");
-
 const vinyle = document.getElementById("vinyle-musique");
 
 const popup = document.getElementById("popup-musique");
 
 const boutonOui = document.getElementById("activer-musique");
-
 const boutonNon = document.getElementById("refuser-musique");
 
 const titrePopup = document.getElementById("titre-popup-musique");
@@ -19,138 +17,132 @@ const textePopup = document.getElementById("texte-popup-musique");
 // MÉMOIRE DE L'AMBIANCE
 //=====================================
 
-const derniereVisite = localStorage.getItem("ambiance-date");
+const aujourdHui = new Date().toDateString();
+
+const dernierJour = localStorage.getItem("ambiance-jour");
 const ambianceActive = localStorage.getItem("ambiance-active");
-
-const maintenant = Date.now();
-
-const delai = 12 * 60 * 60 * 1000;
 
 //=====================================
 // PERSONNALISATION DU MESSAGE
 //=====================================
 
-if(derniereVisite){
-
-    titrePopup.innerHTML = "Quel plaisir de vous retrouver";
-
-    textePopup.innerHTML =
-    "Souhaitez-vous profiter à nouveau de l'ambiance de la Maison ?";
-
-}else{
-
-    titrePopup.innerHTML = "Bienvenue dans notre Maison";
-
-    textePopup.innerHTML =
-    "La Maison vous propose de découvrir son ambiance musicale.";
-
-}
-
-if(derniereVisite){
+if (dernierJour) {
 
     titrePopup.innerHTML = "Heureux de vous retrouver";
 
     textePopup.innerHTML =
-    "Souhaitez-vous profiter à nouveau de l'ambiance de la Maison ?";
+        "Souhaitez-vous profiter à nouveau de l'ambiance de la Maison ?";
 
-}else{
+} else {
 
     titrePopup.innerHTML = "Bienvenue dans notre Maison";
 
     textePopup.innerHTML =
-    "La Maison vous propose de découvrir son ambiance musicale.";
+        "La Maison vous propose de découvrir son ambiance musicale.";
 
 }
 
-if(derniereVisite && (maintenant - Number(derniereVisite)) < delai){
+//=====================================
+// AFFICHAGE DE LA POPUP
+//=====================================
 
-    if(ambianceActive === "oui"){
+if (dernierJour === aujourdHui) {
+
+    if (ambianceActive === "oui") {
 
         popup.style.display = "none";
 
         musique.volume = 0;
 
-        musique.play().catch(()=>{});
+        musique.play().catch(() => {});
 
         vinyle.classList.add("rotation");
 
         let volume = 0;
 
-        const fondu = setInterval(function(){
+        const fondu = setInterval(function () {
 
-            volume += 0.05;
+            volume += 0.01;
 
-            musique.volume = volume;
+            if (volume >= 0.15) {
 
-            if(volume >= 1){
-
-                musique.volume = 1;
+                volume = 0.15;
 
                 clearInterval(fondu);
 
             }
 
-        },200);
+            musique.volume = volume;
 
-    }else{
+        }, 120);
+
+    } else {
 
         popup.style.display = "none";
 
     }
 
+} else {
+
+    popup.style.display = "flex";
+
+    localStorage.removeItem("ambiance-active");
+
 }
 
-// Activation
+//=====================================
+// ACTIVATION
+//=====================================
 
-boutonOui.addEventListener("click",function(){
+boutonOui.addEventListener("click", function () {
 
-popup.style.display="none";
+    popup.style.display = "none";
 
-localStorage.setItem("ambiance-active","oui");
+    localStorage.setItem("ambiance-active", "oui");
+    localStorage.setItem("ambiance-jour", aujourdHui);
 
-localStorage.setItem("ambiance-date",Date.now());
+    musique.volume = 0;
 
-vinyle.style.animationPlayState = "paused";
-    musique.volume=0;
+    musique.play().catch(() => {});
 
-    musique.play().catch(()=>{});
+    vinyle.classList.add("rotation");
 
-    vinyle.style.animationPlayState = "running";
+    let volume = 0;
 
-    let volume=0;
+    const fondu = setInterval(function () {
 
-    const fondu=setInterval(function(){
+        volume += 0.01;
 
-        volume+=0.01;
+        if (volume >= 0.15) {
 
-        musique.volume=volume;
-
-        if(volume>=0.15){
-
-            musique.volume=0.15;
+            volume = 0.15;
 
             clearInterval(fondu);
 
         }
 
-    },120);
+        musique.volume = volume;
+
+    }, 120);
 
 });
 
-// Refus
-boutonNon.addEventListener("click",function(){
+//=====================================
+// REFUS
+//=====================================
 
-popup.style.display="none";
+boutonNon.addEventListener("click", function () {
 
-localStorage.setItem("ambiance-active","non");
+    popup.style.display = "none";
 
-localStorage.setItem("ambiance-date",Date.now());
+    localStorage.setItem("ambiance-active", "non");
+    localStorage.setItem("ambiance-jour", aujourdHui);
 
 });
 
-// =====================================
+//=====================================
 // VINYLE MUSICAL
-// =====================================
+//=====================================
 
 vinyle.addEventListener("click", function () {
 
@@ -170,34 +162,42 @@ vinyle.addEventListener("click", function () {
 
     }
 
-    // =====================================
-// PAUSE AUTOMATIQUE SI L'ONGLET EST QUITTÉ
-// =====================================
+});
+
+//=====================================
+// PAUSE SI L'ONGLET EST QUITTÉ
+//=====================================
 
 document.addEventListener("visibilitychange", function () {
 
     if (document.hidden) {
 
         musique.pause();
+
         vinyle.style.animationPlayState = "paused";
 
     } else {
 
-        musique.play().catch(() => {});
-        vinyle.style.animationPlayState = "running";
+        if (localStorage.getItem("ambiance-active") === "oui") {
+
+            musique.play().catch(() => {});
+
+            vinyle.style.animationPlayState = "running";
+
+        }
 
     }
 
 });
 
-    //=====================================
+//=====================================
 // AMBIANCE SOIRÉE
 //=====================================
 
 const heure = new Date().getHours();
 
 if (heure >= 20 || heure < 6) {
-    document.body.classList.add("ambiance-soiree");
-}
 
-});
+    document.body.classList.add("ambiance-soiree");
+
+}
