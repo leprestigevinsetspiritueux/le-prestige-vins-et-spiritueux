@@ -607,84 +607,21 @@ document.addEventListener("keydown",function(e){
 // AVIS WHATSAPP
 //====================================================
 
-function envoyerAvisWhatsApp(){
+const commentaire = document.getElementById("commentaire-client");
 
-    const nom =
-        document.getElementById("nom-client")
-        .value
-        .trim();
+if (commentaire) {
 
-    const commentaire =
-        document.getElementById("commentaire-client")
-        .value
-        .trim();
+    commentaire.addEventListener("keydown", function(e){
 
-    if(nom===""){
+        if(e.ctrlKey && e.key==="Enter"){
 
-        alert("Veuillez saisir votre prénom.");
+            envoyerAvisWhatsApp();
 
-        return;
+        }
 
-    }
-
-    if(commentaire===""){
-
-        alert("Veuillez écrire votre avis.");
-
-        return;
-
-    }
-
-    const message =
-
-`Bonjour Le Prestige Vins et Spiritueux,
-
-Je souhaite partager mon avis.
-
-👤 Prénom :
-${nom}
-
-💬 Mon avis :
-
-${commentaire}
-
-Merci.`;
-
-    window.open(
-
-        "https://wa.me/2290197592841?text=" +
-
-        encodeURIComponent(message),
-
-        "_blank"
-
-    );
-
-    document.getElementById("nom-client").value="";
-
-    document.getElementById("commentaire-client").value="";
-
-    alert("Merci pour votre avis !");
+    });
 
 }
-
-//====================================================
-// ENTRÉE = ENVOI
-//====================================================
-
-document
-.getElementById("commentaire-client")
-.addEventListener("keydown",function(e){
-
-    if(e.ctrlKey && e.key==="Enter"){
-
-        envoyerAvisWhatsApp();
-
-    }
-
-});
-
-
 //====================================================
 // RETOUR EN HAUT
 //====================================================
