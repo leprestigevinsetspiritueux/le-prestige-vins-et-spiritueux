@@ -1053,6 +1053,11 @@ setInterval(afficherCitation,6000);
 // OUVERTURE DE LA CAVE
 //=====================================
 
+
+//=====================================
+// PREMIÈRE VISITE
+//=====================================
+
 window.addEventListener("load", function () {
 
     setTimeout(function () {
@@ -1060,25 +1065,10 @@ window.addEventListener("load", function () {
         document
             .getElementById("ecran-ouverture")
             .classList.add("cache");
-        const elements = document.querySelectorAll(".apparition");
-
-elements.forEach(function(element,index){
-
-    setTimeout(function(){
-
-        element.classList.add("visible");
-
-    }, index * 350);
-
-});
 
     }, 1800);
 
 });
-
-//=====================================
-// PREMIÈRE VISITE
-//=====================================
 
 window.addEventListener("load", function(){
 
