@@ -1441,23 +1441,27 @@ transition:all .3s ease;
 
 .fermer-panier{
 
+    width:46px;
+    height:46px;
+
     display:flex;
     align-items:center;
     justify-content:center;
 
-    width:42px;
-    height:42px;
+    background:#D4AF37;
+    color:#fff;
 
     border:none;
     border-radius:50%;
 
-    background:#D4AF37;
-    color:#111;
-
-    font-size:28px;
+    font-size:30px;
     font-weight:bold;
 
     cursor:pointer;
+
+    margin-left:auto;
+
+    flex-shrink:0;
 
 }
 
@@ -3585,10 +3589,14 @@ nav a{
 .entete-panier{
 
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 
+    padding-bottom:15px;
     margin-bottom:20px;
+
+    border-bottom:2px solid #D4AF37;
+
 }
 
 .entete-panier h2{
