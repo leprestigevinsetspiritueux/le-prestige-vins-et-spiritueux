@@ -2134,15 +2134,15 @@ nav{
 
 position:fixed;
 
-right:20px;
+right:15px;
 
 left:auto;
 
-bottom:25px;
+bottom:15px;
 
-width:60px;
+width:52px;
 
-height:60px;
+height:52px;
 
 border-radius:50%;
 
@@ -2171,7 +2171,7 @@ transition:transform .3s;
 
 #vinyle-musique:hover{
 
-transform:scale(1.08);
+transform:scale(1.05);
 
 }
 
@@ -2189,9 +2189,9 @@ left:50%;
 
 transform:translate(-50%,-50%);
 
-width:22px;
+width:18px;
 
-height:22px;
+height:18px;
 
 border-radius:50%;
 
@@ -2205,7 +2205,7 @@ flex-direction:column;
 
 font-family:Georgia, serif;
 
-font-size:7px;
+font-size:6px;
 
 font-weight:700;
 
