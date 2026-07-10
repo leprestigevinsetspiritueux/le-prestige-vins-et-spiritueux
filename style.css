@@ -3669,3 +3669,25 @@ nav a{
     }
 
 }
+
+/* PC */
+@media (min-width:769px){
+
+    #vinyle-musique{
+        right:20px;
+        bottom:25px;
+    }
+
+}
+
+/* Téléphone */
+@media (max-width:768px){
+
+    #vinyle-musique{
+        right:15px;
+        bottom:120px; /* au-dessus du bouton WhatsApp */
+        width:42px;
+        height:42px;
+    }
+
+}
