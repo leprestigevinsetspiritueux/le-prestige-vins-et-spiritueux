@@ -1440,6 +1440,9 @@ transition:all .3s ease;
 }
 
 .fermer-panier{
+    position:absolute;
+    top:15px;
+    right:15px;
 
     width:46px;
     height:46px;
@@ -1454,17 +1457,13 @@ transition:all .3s ease;
     border:none;
     border-radius:50%;
 
-    font-size:30px;
+    font-size:28px;
     font-weight:bold;
 
     cursor:pointer;
 
-    margin-left:auto;
-
-    flex-shrink:0;
-
+    z-index:1000;
 }
-
 #panier-lateral.ouvert .fermer-panier{
     display: flex;
     align-items: center;
@@ -1584,13 +1583,6 @@ transition:all .3s ease;
 #temoignages textarea{
 
     min-height:180px !important;
-}
-
-.titre-panier{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:25px;
 }
 
 /* ===== Version PC ===== */
@@ -3567,36 +3559,16 @@ nav a{
 }
 
 }
-.titre-panier{
 
-    position:sticky;
-    top:0;
-
+.entete-panier{
+    position:relative;
     display:flex;
     align-items:center;
     justify-content:space-between;
-
-    background:#3b0010;
 
     padding:18px 20px;
 
     border-bottom:2px solid #D4AF37;
-
-    z-index:100;
-
-}
-
-.entete-panier{
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding-bottom:15px;
-    margin-bottom:20px;
-
-    border-bottom:2px solid #D4AF37;
-
 }
 
 .entete-panier h2{
