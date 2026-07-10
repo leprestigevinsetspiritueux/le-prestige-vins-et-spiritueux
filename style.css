@@ -2134,11 +2134,13 @@ nav{
 
 position:fixed;
 
-right:15px;
+top:120px;
+
+right:20px;
 
 left:auto;
 
-bottom:15px;
+bottom:auto;
 
 width:52px;
 
