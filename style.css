@@ -784,7 +784,9 @@ footer p{
 
     bottom:20px;
 
-    right:20px;
+    left:20px;
+    
+    right:auto;
 
     width:60px;
 
@@ -830,7 +832,9 @@ footer p{
 
     bottom:95px;
 
-    right:20px;
+    left:20px;
+    
+    right:auto;
 
     width:60px;
 
@@ -1356,9 +1360,9 @@ footer p{
 
 #retour-haut{
     position: fixed;
-    left: auto;
-    right: 29px;
-    bottom: 200px;
+    left:20px;
+    right:auto;
+    bottom:170px;
     width: 42px;
     height: 42px;
     display: none;
