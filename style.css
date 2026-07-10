@@ -1399,11 +1399,11 @@ transition:all .3s ease;
 }
 #panier-lateral{
     position:fixed;
-    top:115px;
+    top:90px;
     right:-520px;
     width:520px;
     max-width:100%;
-    height:calc(100% - 115px);
+   height:calc(100% - 90px);
     display:flex;
     flex-direction:column;
     background:#3b0010;
@@ -1411,7 +1411,7 @@ transition:all .3s ease;
     overflow-x:visible;
     transition:.35s;
     z-index:9999;
-    padding:120px 20px 20px;
+    padding:15px;
     box-sizing:border-box;
 }
 #contenu-panier{
