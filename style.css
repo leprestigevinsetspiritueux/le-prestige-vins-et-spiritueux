@@ -2138,9 +2138,9 @@ right:20px;
 
 bottom:20px;
 
-width:45px;
+width:42px;
 
-height:45px;
+height:42px;
 
 border-radius:50%;
 
@@ -3662,28 +3662,6 @@ nav a{
         height:52px;
         font-size:17px;
         border-radius:12px;
-    }
-
-}
-
-/* PC */
-@media (min-width:769px){
-
-    #vinyle-musique{
-        right:20px;
-        bottom:25px;
-    }
-
-}
-
-/* Téléphone */
-@media (max-width:768px){
-
-    #vinyle-musique{
-        right:15px;
-        bottom:120px; /* au-dessus du bouton WhatsApp */
-        width:42px;
-        height:42px;
     }
 
 }
