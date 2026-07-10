@@ -3550,16 +3550,29 @@ nav a{
 /*======================================
  PANIER MOBILE
 ======================================*/
+@media (max-width:768px){
 
-.entete-panier{
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    #panier-lateral{
+        top:150px;
+        height:calc(100% - 150px);
+        padding:10px;
+    }
 
-    padding:18px 20px;
+    .entete-panier{
+        position:sticky;
+        top:0;
+        background:#3b0010;
+        z-index:1000;
+        padding:12px 15px;
+    }
 
-    border-bottom:2px solid #D4AF37;
+    .fermer-panier{
+        position:static;
+        margin-left:auto;
+        width:46px;
+        height:46px;
+    }
+
 }
 
 .entete-panier h2{
