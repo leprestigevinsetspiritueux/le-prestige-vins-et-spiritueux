@@ -1275,22 +1275,6 @@ footer p{
     margin-bottom:40px;
 }
 
-.formulaire-avis{
-    max-width:700px;
-    margin:auto;
-    margin-bottom:50px;
-}
-
-.formulaire-avis input,
-.formulaire-avis textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:15px;
-    border:none;
-    border-radius:10px;
-    font-size:16px;
-}
-
 .etoiles{
     font-size:32px;
     margin-bottom:20px;
@@ -1413,7 +1397,6 @@ transition:all .3s ease;
     display:none;
     z-index:9998;
 }
-
 #panier-lateral{
     position:fixed;
     top:0;
@@ -1421,19 +1404,16 @@ transition:all .3s ease;
     width:520px;
     max-width:100%;
     height:100%;
-
     display:flex;
     flex-direction:column;
-
     background:#3b0010;
     overflow-y:auto;
     overflow-x:visible;
     transition:.35s;
     z-index:9999;
-    padding:20px;
+    padding:0;
     box-sizing:border-box;
 }
-
 #contenu-panier{
     flex:1;
     overflow-y:auto;
@@ -1481,11 +1461,6 @@ transition:all .3s ease;
 
 }
 
-#panier-lateral.ouvert .fermer-panier{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
 #panier-lateral.ouvert .fermer-panier{
     display: flex;
     align-items: center;
@@ -1719,12 +1694,6 @@ article{
     max-width:100%;
     box-sizing:border-box;
 }
-
-html,
-body{
-    overflow-x:hidden;
-}
-
 html,
 body{
     overflow-x:hidden !important;
@@ -1828,27 +1797,6 @@ nav{
 
    }
 
-/* Téléphone */
-@media (max-width:768px){
-
-    #panier-lateral{
-        padding-top:80px !important;
-    }
-
-   .fermer-panier{
-    top:135px !important;
-    right:15px !important;
-}
-
-    #panier-lateral h2{
-        margin-top:15px;
-    }
-}
-    @media (min-width:769px){
-    h1{
-        font-size:52px;
-    }
-}
 
 .prix{
     text-align:center;
@@ -3608,16 +3556,13 @@ nav a{
 ======================================*/
 @media (max-width:768px){
 
-#panier-lateral,
-.panier-lateral{
-
-    top:70px !important;
-    height:calc(100vh - 60px) !important;
-
+#panier-lateral{
+    top:110px;
+    height:calc(100vh - 110px);
+    padding:20px;
 }
 
 }
-
 .titre-panier{
 
     position:sticky;
