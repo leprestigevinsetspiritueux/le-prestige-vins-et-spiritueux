@@ -31,14 +31,14 @@ if (dernierJour) {
     titrePopup.innerHTML = "Heureux de vous retrouver";
 
     textePopup.innerHTML =
-        "Souhaitez-vous profiter à nouveau de l'ambiance de la Maison ?";
+        "Souhaitez-vous profiter à nouveau de l'ambiance de notre Cave ?";
 
 } else {
 
-    titrePopup.innerHTML = "Bienvenue dans notre Maison";
+    titrePopup.innerHTML = "Bienvenue dans notre Cave";
 
     textePopup.innerHTML =
-        "La Maison vous propose de découvrir son ambiance musicale.";
+        "Notre Cave vous propose de découvrir son ambiance musicale.";
 
 }
 
@@ -46,49 +46,7 @@ if (dernierJour) {
 // AFFICHAGE DE LA POPUP
 //=====================================
 
-if (dernierJour === aujourdHui) {
-
-    if (ambianceActive === "oui") {
-
-        popup.style.display = "none";
-
-        musique.volume = 0;
-
-        musique.play().catch(() => {});
-
-        vinyle.classList.add("rotation");
-
-        let volume = 0;
-
-        const fondu = setInterval(function () {
-
-            volume += 0.01;
-
-            if(volume >= 0.25){
-
-    musique.volume = 0.25;
-
-    clearInterval(fondu);
-
-}
-
-    musique.volume = volume;
-
-        }, 120);
-
-    } else {
-
-        popup.style.display = "none";
-
-    }
-
-} else {
-
-    popup.style.display = "flex";
-
-    localStorage.removeItem("ambiance-active");
-
-}
+popup.style.display = "flex";
 
 //=====================================
 // ACTIVATION
@@ -97,9 +55,6 @@ if (dernierJour === aujourdHui) {
 boutonOui.addEventListener("click", function () {
 
     popup.style.display = "none";
-
-    localStorage.setItem("ambiance-active", "oui");
-    localStorage.setItem("ambiance-jour", aujourdHui);
 
     musique.volume = 0;
 
@@ -134,9 +89,6 @@ boutonOui.addEventListener("click", function () {
 boutonNon.addEventListener("click", function () {
 
     popup.style.display = "none";
-
-    localStorage.setItem("ambiance-active", "non");
-    localStorage.setItem("ambiance-jour", aujourdHui);
 
 });
 
