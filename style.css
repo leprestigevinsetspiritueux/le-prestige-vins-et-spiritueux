@@ -1607,12 +1607,13 @@ transition:all .3s ease;
         font-size:20px;
         font-weight:bold;
         letter-spacing:0.5px;
-        color:#D4AF37;
+        color:#fff;
         transition:.3s;
     }
 
     #menu a:hover{
-    color:#ffffff;
+   color:#D4AF37;
+
 }
 
     #menu li{
@@ -1723,6 +1724,7 @@ body{
 }
 
 nav{
+    background:linear-gradient(180deg,#6D071A,#4A0013) !important;
     z-index:100000 !important;
 }
 
@@ -1756,7 +1758,7 @@ nav{
 
    #menu a{
     display:block;
-    color:#D4AF37;
+    color:#fff;
     font-size:16px;
     font-weight:bold;
     text-decoration:none;
@@ -1765,7 +1767,7 @@ nav{
 }
 
 #menu a:hover{
-    color:#fff;
+    color:#D4AF37;
 }
 
 #menu a:last-child{
