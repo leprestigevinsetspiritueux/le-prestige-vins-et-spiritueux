@@ -3944,3 +3944,73 @@ section.message-maison p {
     opacity: 1 !important;
     box-shadow: 0 4px 12px rgba(56,35,51,.20);
 }
+
+
+/* SECTION AVIS GOOGLE - PRUNE ET OR ROYAL */
+
+#avis-google {
+    background: #F8F2F4 !important;
+    padding: 45px 20px !important;
+}
+
+#avis-google .avis-conteneur {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(167,131,67,.55) !important;
+    box-shadow: 0 10px 30px rgba(56,35,51,.12) !important;
+}
+
+#avis-google .etoiles-google {
+    color: #A78343 !important;
+}
+
+#avis-google h2 {
+    color: #3B0A2E !important;
+}
+
+#avis-google .texte-avis {
+    color: #665A64 !important;
+}
+
+#avis-google .scan {
+    color: #A78343 !important;
+}
+
+#avis-google .cadre-qr {
+    background: #FFFFFF !important;
+    border-color: #A78343 !important;
+}
+
+
+/* SIGNATURE AVIS - BRONZE PRESTIGE */
+#avis-google .signature {
+    color: #8B6B34 !important;
+    font-weight: 600;
+}
+
+
+/* CATEGORIES - IDENTITE PRUNE ET OR ROYAL */
+
+.categories button {
+    background: #3B0A2E !important;
+    color: #F8F2F4 !important;
+    border: 1px solid #A78343 !important;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background .25s ease,
+                color .25s ease,
+                transform .25s ease,
+                box-shadow .25s ease;
+}
+
+.categories button:hover {
+    background: #A78343 !important;
+    color: #21051C !important;
+    border-color: #A78343 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 14px rgba(56,35,51,.16);
+}
+
+.categories button:focus-visible {
+    outline: 2px solid #A78343;
+    outline-offset: 3px;
+}
