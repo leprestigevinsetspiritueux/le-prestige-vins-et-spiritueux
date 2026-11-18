@@ -430,9 +430,11 @@ section{
 
     border-radius:50%;
 
-    background:#C62828;
+    background:linear-gradient(135deg,#3B0A2E,#21051C);
 
-    color:white;
+    color:#D4AF37;
+    border:1px solid #D4AF37;
+    box-shadow:0 3px 10px rgba(59,10,46,.25);
 
     cursor:pointer;
 
