@@ -3596,9 +3596,12 @@ nav a{
     /* Grille plus élégante */
     .produits{
         display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
-        gap:35px;
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:25px;
         padding:20px;
+        width:100%;
+        max-width:1400px;
+        margin:0 auto;
     }
 
     /* Carte produit */
@@ -4014,3 +4017,20 @@ section.message-maison p {
     outline: 2px solid #A78343;
     outline-offset: 3px;
 }
+
+
+/* GRILLE PC - ADAPTATION AUX ECRANS INTERMEDIAIRES */
+@media (min-width:769px) and (max-width:1100px){
+    .produits{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+}
+
+/* PRESTIGE - RESTAURATION DU FOND ROSE POUDRE */
+html,
+body,
+body.ambiance-soiree,
+#catalogue {
+    background: #F8F2F4 !important;
+}
+
