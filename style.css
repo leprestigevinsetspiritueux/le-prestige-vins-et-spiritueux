@@ -1724,7 +1724,9 @@ body{
 }
 
 nav{
-    background:linear-gradient(180deg,#6D071A,#4A0013) !important;
+    background:linear-gradient(180deg,#3B0A2E 0%,#21051C 100%) !important;
+    border-bottom:1px solid rgba(212,175,55,.65);
+    box-shadow:0 4px 15px rgba(0,0,0,.20);
     z-index:100000 !important;
 }
 
@@ -3666,4 +3668,279 @@ nav a{
         border-radius:12px;
     }
 
+}
+
+
+/* IDENTITE PRESTIGE - CARTES PRODUITS */
+
+.carte {
+    background: #FFFFFF !important;
+    color: #382333 !important;
+    border: 1px solid rgba(167,131,67,.30) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 8px 24px rgba(56,35,51,.10) !important;
+}
+
+.carte .contenu {
+    background: #FFFFFF;
+    padding: 18px;
+}
+
+.carte .contenu h3 {
+    color: #382333 !important;
+}
+
+.carte .contenu p {
+    color: #665A64;
+}
+
+.carte .prix,
+.carte .prix strong {
+    color: #A78343 !important;
+}
+
+.carte img {
+    background: #FFFFFF;
+}
+
+.carte .actions {
+    padding: 12px 18px 18px;
+}
+
+@media (hover: hover) {
+    .carte:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(56,35,51,.16) !important;
+        border-color: rgba(167,131,67,.65) !important;
+    }
+}
+
+
+
+/* TITRES SECTIONS - PRUNE & OR ROYAL */
+#catalogue > h2,
+#meilleures-ventes > h2,
+#apropos h2,
+#services h2,
+#pourquoi h2,
+#avis-google h2,
+#livraison h2,
+#paiement h2,
+#contact h2 {
+    color: #3B0A2E !important;
+    text-align: center;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 35px auto 25px;
+}
+
+#catalogue > h2::after,
+#meilleures-ventes > h2::after,
+#apropos h2::after,
+#services h2::after,
+#pourquoi h2::after,
+#avis-google h2::after,
+#livraison h2::after,
+#paiement h2::after,
+#contact h2::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 3px;
+    background: #A78343;
+    margin: 14px auto 0;
+    border-radius: 3px;
+}
+
+
+
+/* FOOTER PRESTIGE - PRUNE ET OR ROYAL */
+
+footer.footer-principal {
+    background: linear-gradient(180deg, #3B0A2E 0%, #21051C 100%);
+    color: #F8F2F4;
+    text-align: center;
+    padding: 38px 20px 24px;
+    margin-top: 50px;
+    border-top: 2px solid #A78343;
+}
+
+footer.footer-principal .footer-contenu {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+footer.footer-principal .footer-marque {
+    color: #E6C98E;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0 0 4px;
+}
+
+footer.footer-principal .footer-signature {
+    color: #E6C98E;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin: 0 0 20px;
+}
+
+footer.footer-principal .footer-phrase {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 15px 0 25px;
+}
+
+footer.footer-principal .footer-adresse {
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+footer.footer-principal .footer-adresse p {
+    margin: 4px 0;
+}
+
+footer.footer-principal .footer-adresse strong {
+    color: #E6C98E;
+    letter-spacing: 2px;
+}
+
+footer.footer-principal .footer-coordonnees {
+    color: #D8C3D1;
+    font-size: 13px;
+    margin-top: 10px !important;
+}
+
+footer.footer-principal .footer-liens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin: 25px auto;
+}
+
+footer.footer-principal .footer-liens a {
+    color: #E6C98E;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 9px 12px;
+    border: 1px solid rgba(167, 131, 67, .45);
+    border-radius: 20px;
+    transition: background .25s ease;
+}
+
+footer.footer-principal .footer-liens a:hover {
+    background: rgba(167, 131, 67, .16);
+}
+
+footer.footer-principal .footer-copyright {
+    border-top: 1px solid rgba(167, 131, 67, .45);
+    padding-top: 18px;
+    margin: 25px 0 0;
+    color: #D8C3D1;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    footer.footer-principal {
+        padding: 30px 15px 20px;
+    }
+
+    footer.footer-principal .footer-liens {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer.footer-principal .footer-liens a {
+        width: 100%;
+        max-width: 280px;
+        box-sizing: border-box;
+    }
+}
+
+
+/* LOCALISATION - VOTRE CAVISTE */
+
+#contact .localisation-caviste {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 22px;
+    text-align: center;
+    background: rgba(167,131,67,.06);
+    border: 1px solid rgba(167,131,67,.45);
+    border-radius: 16px;
+}
+
+#contact .localisation-caviste p {
+    color: #382333;
+    margin: 8px 0;
+}
+
+#contact .localisation-caviste a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    color: #F8F2F4;
+    background: #3B0A2E;
+    border: 1px solid #A78343;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact .localisation-caviste a:hover {
+    background: #21051C;
+}
+
+footer.footer-principal {
+    padding: 28px 20px 20px;
+}
+
+
+/* FOOTER SIMPLIFIE - COPYRIGHT UNIQUEMENT */
+footer.footer-principal {
+    padding: 18px 20px;
+}
+
+footer.footer-principal .footer-copyright {
+    border-top: none;
+    padding-top: 0;
+    margin: 0;
+}
+
+
+/* ESPACEMENT FINAL COMPACT - MESSAGE MAISON */
+
+section.message-maison {
+    padding: 12px 20px 22px !important;
+    margin-top: 0 !important;
+}
+
+section.message-maison .separateur-maison {
+    margin: 0 auto 10px !important;
+}
+
+section.message-maison p {
+    margin: 0 !important;
+}
+
+
+/* MONOGRAMME LP - CONTRASTE RENFORCE */
+
+.separateur-maison span.monogramme-lp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #3B0A2E !important;
+    color: #F1D9A4 !important;
+    border: 1px solid #A78343 !important;
+    border-radius: 30px;
+    padding: 9px 20px !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    opacity: 1 !important;
+    box-shadow: 0 4px 12px rgba(56,35,51,.20);
 }
