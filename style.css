@@ -32,7 +32,7 @@ body{
 
     background:
         linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-        url("fond.jpg");
+        url("fond-prestige.png");
 
     background-size:cover;
     background-position:center;
@@ -4079,5 +4079,370 @@ body.ambiance-soiree,
         justify-items: center;
         align-items: center;
         padding: 15px 5px;
+    }
+}
+
+/* ===== IDENTITE VISUELLE PRESTIGE ===== */
+
+.identite-prestige {
+    position: absolute;
+    top: 165px;
+    left: 45px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 420px;
+}
+
+.identite-prestige .logo {
+    width: 115px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 12px 0;
+}
+
+.identite-prestige .titre-identite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 8px;
+    opacity: 1;
+    animation: none;
+}
+
+.identite-prestige .titre-principal {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.identite-prestige .titre-secondaire {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    letter-spacing: 2px;
+    color: #D4AF37;
+}
+
+.identite-prestige .slogan {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #fff;
+    margin: 0;
+    opacity: 1;
+    animation: none;
+}
+
+@media (max-width: 768px) {
+    .identite-prestige {
+        top: 115px;
+        left: 18px;
+        max-width: 290px;
+    }
+
+    .identite-prestige .logo {
+        width: 78px;
+    }
+
+    .identite-prestige .titre-principal {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    .identite-prestige .titre-secondaire {
+        font-size: 15px;
+    }
+
+    .identite-prestige .slogan {
+        font-size: 13px;
+    }
+}
+
+/* ===== IDENTITE VISUELLE PRESTIGE ===== */
+
+.identite-prestige {
+    position: absolute;
+    top: 165px;
+    left: 45px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 420px;
+}
+
+.identite-prestige .logo {
+    width: 115px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 12px 0;
+}
+
+.identite-prestige .titre-identite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 8px;
+    opacity: 1;
+    animation: none;
+}
+
+.identite-prestige .titre-principal {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.identite-prestige .titre-secondaire {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    letter-spacing: 2px;
+    color: #D4AF37;
+}
+
+.identite-prestige .slogan {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #fff;
+    margin: 0;
+    opacity: 1;
+    animation: none;
+}
+
+@media (max-width: 768px) {
+    .identite-prestige {
+        top: 115px;
+        left: 18px;
+        max-width: 290px;
+    }
+
+    .identite-prestige .logo {
+        width: 78px;
+    }
+
+    .identite-prestige .titre-principal {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    .identite-prestige .titre-secondaire {
+        font-size: 15px;
+    }
+
+    .identite-prestige .slogan {
+        font-size: 13px;
+    }
+}
+
+/* Repositionnement des citations animées dans l'accueil */
+#accueil {
+    position: relative;
+}
+
+#accueil .citation-container {
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    transform: translateX(-50%);
+    width: min(100%, 890px);
+    margin: 0;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    #accueil .citation-container {
+        bottom: 35px;
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+/* Finition de l'identité visuelle */
+.identite-prestige {
+    top: 145px;
+}
+
+.identite-prestige .titre-principal {
+    font-family: 'Cinzel', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+}
+
+@media (max-width: 768px) {
+    .identite-prestige {
+        top: 100px;
+    }
+}
+
+/* ===== IDENTITE PRESTIGE - VERSION CENTREE ===== */
+#accueil .identite-prestige {
+    position: absolute !important;
+    top: 145px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 5;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center !important;
+    width: min(90%, 520px);
+    max-width: 520px;
+}
+
+#accueil .identite-prestige .logo {
+    width: 95px !important;
+    height: auto;
+    margin: 0 0 8px !important;
+}
+
+#accueil .identite-prestige .titre-identite {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    margin: 0 0 8px !important;
+    opacity: 1 !important;
+    animation: none !important;
+}
+
+#accueil .identite-prestige .titre-principal {
+    font-family: 'Allura', cursive !important;
+    font-size: 48px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.1;
+    color: #fff !important;
+}
+
+#accueil .identite-prestige .titre-secondaire {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 18px !important;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #D4AF37 !important;
+}
+
+#accueil .identite-prestige .slogan {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 18px !important;
+    font-style: italic;
+    line-height: 1.4;
+    color: #fff !important;
+    margin: 5px 0 0 !important;
+    opacity: 1 !important;
+    animation: none !important;
+}
+
+@media (max-width: 768px) {
+    #accueil .identite-prestige {
+        top: 115px !important;
+        width: 94%;
+    }
+
+    #accueil .identite-prestige .logo {
+        width: 72px !important;
+    }
+
+    #accueil .identite-prestige .titre-principal {
+        font-size: 38px !important;
+    }
+
+    #accueil .identite-prestige .titre-secondaire {
+        font-size: 15px !important;
+    }
+
+    #accueil .identite-prestige .slogan {
+        font-size: 15px !important;
+    }
+}
+
+/* ===== LOGO EN HAUT A GAUCHE, IDENTITE CENTREE ===== */
+#accueil .identite-prestige {
+    left: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: none !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+#accueil .identite-prestige .logo {
+    position: absolute !important;
+    top: 0 !important;
+    left: 35px !important;
+    width: 85px !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    #accueil .identite-prestige .logo {
+        left: 15px !important;
+        width: 62px !important;
+    }
+}
+
+/* ===== AMELIORATION VISIBILITE DU LOGO ===== */
+#accueil .identite-prestige .logo {
+    width: 125px !important;
+    left: 30px !important;
+    top: -5px !important;
+    filter: brightness(1.5) saturate(1.3)
+            drop-shadow(0 0 5px rgba(255, 215, 120, 0.8))
+            drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    #accueil .identite-prestige .logo {
+        width: 88px !important;
+        left: 12px !important;
+        top: 0 !important;
+    }
+}
+
+/* Retour du logo au-dessus du nom */
+#accueil .identite-prestige .logo {
+    position: static !important;
+    width: 105px !important;
+    margin: 0 0 8px 0 !important;
+    filter: none !important;
+}
+
+#accueil .identite-prestige {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: min(90%, 520px) !important;
+}
+
+@media (max-width: 768px) {
+    #accueil .identite-prestige .logo {
+        width: 75px !important;
+    }
+}
+
+/* Retour à la typographie classique du Prestige */
+#accueil .identite-prestige .titre-principal {
+    font-family: 'Cinzel', serif !important;
+    font-size: 35px !important;
+    font-weight: 600 !important;
+    letter-spacing: 3px !important;
+    line-height: 1.2 !important;
+}
+
+@media (max-width: 768px) {
+    #accueil .identite-prestige .titre-principal {
+        font-size: 25px !important;
+        letter-spacing: 2px !important;
     }
 }
