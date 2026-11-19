@@ -50,7 +50,6 @@ body{
 
     padding-top:120px;
 
-    margin-top:70px;
 
 }
 
@@ -4036,3 +4035,49 @@ body.ambiance-soiree,
     background: #F8F2F4 !important;
 }
 
+
+/* ===== MENU HAMBURGER MOBILE LE PRESTIGE ===== */
+
+#bouton-menu-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #bouton-menu-mobile {
+        display: block;
+        order: 0;
+        margin: 0 0 0 12px;
+        padding: 8px 13px;
+        background: transparent;
+        border: 1px solid #D4AF37;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 25px;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    #menu {
+        display: none;
+        order: 1;
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    #menu.menu-ouvert {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px 8px;
+        justify-items: center;
+        align-items: center;
+        padding: 15px 5px;
+    }
+}

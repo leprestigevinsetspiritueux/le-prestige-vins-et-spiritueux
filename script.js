@@ -1046,3 +1046,49 @@ function afficherMessageRetour(){
     },1200);
 
 }
+
+// ===== MENU HAMBURGER MOBILE LE PRESTIGE =====
+(function () {
+    function initialiserMenuMobile() {
+        const bouton = document.getElementById("bouton-menu-mobile");
+        const menu = document.getElementById("menu");
+
+        if (!bouton || !menu || bouton.dataset.menuInitialise === "oui") return;
+
+        bouton.dataset.menuInitialise = "oui";
+
+        bouton.addEventListener("click", function () {
+            const ouvert = menu.classList.toggle("menu-ouvert");
+
+            bouton.setAttribute("aria-expanded", String(ouvert));
+            bouton.setAttribute("aria-label", ouvert ? "Fermer le menu" : "Ouvrir le menu");
+            bouton.textContent = "☰";
+        });
+
+        menu.querySelectorAll('a[href^="#"]').forEach(function (lien) {
+            lien.addEventListener("click", function () {
+                menu.classList.remove("menu-ouvert");
+                bouton.setAttribute("aria-expanded", "false");
+                bouton.setAttribute("aria-label", "Ouvrir le menu");
+                bouton.textContent = "☰";
+            });
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                menu.classList.remove("menu-ouvert");
+                bouton.setAttribute("aria-expanded", "false");
+                bouton.setAttribute("aria-label", "Ouvrir le menu");
+                bouton.textContent = "☰";
+            }
+        });
+
+        console.log("Menu mobile initialisé.");
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initialiserMenuMobile, { once: true });
+    } else {
+        initialiserMenuMobile();
+    }
+})();
