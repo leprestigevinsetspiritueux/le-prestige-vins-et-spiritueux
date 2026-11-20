@@ -4446,3 +4446,161 @@ body.ambiance-soiree,
         letter-spacing: 2px !important;
     }
 }
+
+/* Réduction de l'espace entre l'accueil et la collection sur mobile */
+@media (max-width: 768px) {
+    #accueil {
+        min-height: 320px !important;
+        height: 320px !important;
+        padding: 0 20px !important;
+        margin-bottom: 0 !important;
+        box-sizing: border-box;
+    }
+}
+
+/* Ajustement mobile : identité et citations sans chevauchement */
+@media (max-width: 768px) {
+    #accueil {
+        min-height: 360px !important;
+        height: 360px !important;
+    }
+
+    #accueil .citation-container {
+        bottom: 10px !important;
+    }
+}
+
+/* Réduction de l'espace avant la collection sur mobile */
+@media (max-width: 768px) {
+    #catalogue {
+        padding: 10px 15px 35px !important;
+    }
+
+    #catalogue > h2 {
+        margin: 10px auto 20px !important;
+    }
+}
+
+/* MOBILE : citations sous l'identité visuelle */
+@media (max-width: 768px) {
+    #accueil .citation-container {
+        bottom: 5px !important;
+        width: 96% !important;
+        padding: 0 5px !important;
+        z-index: 2 !important;
+    }
+
+    #accueil .citation-vin {
+        font-size: 12px !important;
+        line-height: 1.25 !important;
+        text-align: center !important;
+    }
+}
+
+/* AJUSTEMENT FINAL MOBILE : slogan et citations */
+@media (max-width: 768px) {
+    #accueil .identite-prestige .slogan {
+        transform: translateY(-10px) !important;
+    }
+
+    #accueil .citation-container {
+        bottom: -10px !important;
+    }
+}
+
+/* POSITIONNEMENT MOBILE DEFINITIF */
+@media screen and (max-width: 768px) {
+    #accueil {
+        height: 360px !important;
+        min-height: 360px !important;
+        position: relative !important;
+    }
+
+    #accueil .identite-prestige {
+        top: 95px !important;
+    }
+
+    #accueil .identite-prestige .slogan {
+        transform: translateY(-8px) !important;
+    }
+
+    #accueil .citation-container {
+        position: absolute !important;
+        top: 300px !important;
+        bottom: auto !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 96% !important;
+        padding: 0 5px !important;
+    }
+}
+
+/* ===== ESPACEMENTS COMPACTS ENTRE LES RUBRIQUES MOBILE ===== */
+@media (max-width: 768px) {
+
+    /* Séparateurs LP */
+    .separateur-maison {
+        margin: 8px auto !important;
+        line-height: 1.2 !important;
+    }
+
+    .separateur-maison span.monogramme-lp {
+        padding: 6px 16px !important;
+        font-size: 14px !important;
+    }
+
+    /* Titres des rubriques */
+    #catalogue > h2,
+    #meilleures-ventes > h2,
+    #apropos h2,
+    #services h2,
+    #pourquoi h2,
+    #avis-google h2,
+    #livraison h2,
+    #paiement h2,
+    #contact h2 {
+        margin: 18px auto 14px !important;
+    }
+
+    /* Message final de la maison */
+    section.message-maison {
+        padding: 12px 15px !important;
+        margin: 0 !important;
+    }
+
+    section.message-maison .separateur-maison {
+        margin: 0 auto 6px !important;
+    }
+
+    section.message-maison p {
+        margin: 0 !important;
+        line-height: 1.4 !important;
+    }
+}
+
+
+/* REDUCTION DES ESPACEMENTS ENTRE SECTIONS SUR MOBILE */
+@media screen and (max-width: 768px) {
+    body section:not(#accueil) {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+}
+
+/* CORRECTION ESPACE SOUS LES CATEGORIES - MOBILE */
+@media screen and (max-width: 768px) {
+    .categories {
+        margin-bottom: 12px !important;
+    }
+
+    #message-categorie:not(.visible) {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #meilleures-ventes {
+        padding-top: 12px !important;
+    }
+}
