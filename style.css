@@ -4604,3 +4604,141 @@ body.ambiance-soiree,
         padding-top: 12px !important;
     }
 }
+
+/* ===== FINITION PREMIUM DU MENU MOBILE ===== */
+@media screen and (max-width: 768px) {
+
+    #menu.menu-ouvert {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px 5px;
+        padding: 12px 10px 15px;
+    }
+
+    #menu a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 36px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 13px !important;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        color: #F8F2F4;
+        padding: 7px 3px;
+        border-radius: 8px;
+    }
+
+    /* Panier sur toute la largeur */
+    #menu a:last-child {
+        grid-column: 1 / -1;
+        margin-top: 3px;
+        min-height: 42px;
+        background: rgba(167, 131, 67, 0.16);
+        border: 1px solid #A78343;
+        color: #E8C77A;
+        font-size: 15px !important;
+    }
+
+    #menu a:active {
+        background: rgba(167, 131, 67, 0.22);
+    }
+}
+
+/* Masquer les boutons flottants lorsque le panier est ouvert - MOBILE */
+@media (max-width: 768px) {
+    body:has(#panier-lateral.ouvert) .call-float,
+    body:has(#panier-lateral.ouvert) .whatsapp-float,
+    body:has(#panier-lateral.ouvert) #retour-haut {
+        display: none !important;
+    }
+}
+
+/* Boutons flottants empilés à gauche sur mobile */
+@media (max-width: 768px) {
+    .call-float {
+        bottom: 82px !important;
+        left: 20px !important;
+        right: auto !important;
+        display: flex !important;
+    }
+
+    .whatsapp-float {
+        bottom: 20px !important;
+        left: 20px !important;
+        right: auto !important;
+    }
+}
+
+/* POSITION FINALE DES BOUTONS FLOTTANTS SUR MOBILE */
+@media (max-width: 768px) {
+    .call-float {
+        bottom: 67px !important;
+        left: 20px !important;
+        right: auto !important;
+    }
+
+    .whatsapp-float {
+        bottom: 10px !important;
+        left: 20px !important;
+        right: auto !important;
+    }
+}
+
+/* Léger décalage à gauche des boutons flottants */
+@media (max-width: 768px) {
+    .call-float,
+    .whatsapp-float {
+        left: 10px !important;
+        right: auto !important;
+    }
+}
+
+/* Ajustement final des boutons flottants sur mobile */
+@media (max-width: 768px) {
+    .call-float,
+    .whatsapp-float {
+        left: 5px !important;
+        right: auto !important;
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .call-float {
+        font-size: 20px !important;
+        bottom: 62px !important;
+    }
+
+    .whatsapp-float img {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .whatsapp-float {
+        bottom: 10px !important;
+    }
+}
+
+/* Retour en haut : léger décalage à gauche sur téléphone */
+@media (max-width: 768px) {
+    #retour-haut {
+        left: 8px !important;
+        right: auto !important;
+    }
+}
+
+/* Masquer le vinyle musical lorsque le panier est ouvert */
+body:has(#panier-lateral.ouvert) #vinyle-musique,
+body:has(#panier-lateral.ouvert) #tooltip-musique {
+    display: none !important;
+}
+
+
+/* Décalage léger du vinyle sur mobile uniquement */
+@media (max-width: 768px) {
+    #vinyle-musique {
+        right: 10px !important;
+    }
+}
+

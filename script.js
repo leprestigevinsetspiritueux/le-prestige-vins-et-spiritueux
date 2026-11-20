@@ -1074,6 +1074,18 @@ function afficherMessageRetour(){
             });
         });
 
+        document.addEventListener("pointerdown", function (event) {
+
+            if (!window.matchMedia("(max-width: 768px)").matches) return;
+            if (!menu.classList.contains("menu-ouvert")) return;
+            if (menu.contains(event.target) || bouton.contains(event.target)) return;
+
+            menu.classList.remove("menu-ouvert");
+            bouton.setAttribute("aria-expanded", "false");
+            bouton.setAttribute("aria-label", "Ouvrir le menu");
+            bouton.textContent = "☰";
+        }, true);
+
         document.addEventListener("keydown", function (event) {
             if (event.key === "Escape") {
                 menu.classList.remove("menu-ouvert");
